@@ -1,0 +1,10 @@
+# Secrets — never commit tokens or credentials
+*.env
+.env.*
+*token*
+*secret*
+*credential*
+
+# OS
+.DS_Store
+Thumbs.db

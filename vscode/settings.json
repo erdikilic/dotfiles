@@ -1,0 +1,88 @@
+{
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorCustomizations": {
+        "editorBracketHighlight.foreground1": "#e53f21",
+        "editorBracketHighlight.foreground2": "#e7a626",
+        "editorBracketHighlight.foreground3": "#dd1a99",
+        "editorBracketHighlight.foreground4": "#2256e2",
+        "editorBracketHighlight.foreground5": "#14e93b",
+        "editorBracketHighlight.foreground6": "#e3e92b"
+    },
+    "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
+    "workbench.preferredLightColorTheme": "Quiet Light",
+    // "workbench.editorAssociations": {
+    //     "*.csv": "jupyter-data-wrangler",
+    //     "*.tsv": "jupyter-data-wrangler",
+    // },
+
+    "editor.fontFamily": "Firacode Nerd Font",
+    "editor.largeFileOptimizations": false,
+    "editor.inlineSuggest.enabled": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.bracketPairsHorizontal": true,
+    "editor.guides.highlightActiveBracketPair": true,
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true,
+    },
+
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.inheritEnv": false,
+
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false,
+        "python": true
+    },
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "git.openRepositoryInParentFolders": "never",
+
+    "vsicons.dontShowNewVersionMessage": true,
+    "mojo.modularHomePath": "/home/erdi/.modular",
+    "notebook.lineNumbers": "on",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "right"
+    },
+    "notebook.formatOnSave.enabled": true,
+
+
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+    },
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.inlayHints.callArgumentNames": "partial",
+    "python.analysis.inlayHints.variableTypes": false,
+    "python.analysis.inlayHints.functionReturnTypes": false,
+    "black-formatter.args": ["--line-length", "150", "--skip-magic-trailing-comma"],
+    "isort.args": ["--profile", "black"],
+
+    "[rust]": {
+        "editor.formatOnSave": true,
+    },
+    "r.rpath.linux": "/home/erdi/miniconda3/envs/rlang/bin/R",
+    "[r]": {
+        "editor.formatOnSave": true,
+    },
+    "notebook.output.minimalErrorRendering": true,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.preferredAccount": "erdikilic",
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "chat.tools.terminal.autoApprove": {
+        "Rscript debug_drimseq.R": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    },
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+}

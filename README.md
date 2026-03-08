@@ -7,7 +7,7 @@ Personal dev environment — shell, editor, AI tools, themes, and templates.
 ## Directory Structure
 
 ```
-dev-toolkit/
+dotfiles/
   vscode/
     settings.json          # Editor settings, themes, formatting
     keybindings.json       # Custom key bindings
@@ -15,16 +15,8 @@ dev-toolkit/
   shell/
     zshrc                  # Zsh config (oh-my-zsh + powerlevel10k)
     powerlevel10k/p10k.zsh # Prompt theme (rainbow, nerdfont, 1-line)
-    oh-my-posh/            # Oh My Posh themes
-    starship/              # Starship configs
   claude-code/
     settings.json          # Plugin config & enabled plugins
-    plugins/               # Custom plugins
-    hooks/                 # Custom hooks
-    skills/                # Custom skills
-  assets/
-    themes/                # Color schemes, wallpapers, UI assets
-    templates/             # Project boilerplate
 ```
 
 ---
@@ -37,11 +29,6 @@ dev-toolkit/
 - **Font:** [FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
 - **Plugins:** git, [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions), [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 - **Package managers:** conda/mamba (miniforge3), nvm, pixi, bun
-
-### Alternative Prompts
-
-- [Oh My Posh](https://ohmyposh.dev/) — cross-shell, themes in `shell/oh-my-posh/`
-- [Starship](https://starship.rs/) — minimal, fast, configs in `shell/starship/`
 
 ---
 

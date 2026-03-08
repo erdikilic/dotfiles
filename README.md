@@ -115,6 +115,12 @@ cat vscode/extensions.txt | xargs -L 1 code --install-extension
 
 ---
 
+## Python (Ruff)
+
+Base `ruff.toml` for Snakemake pipelines — copy and add project-specific `per-file-ignores` and `known-first-party`.
+
+---
+
 ## Claude Code (22 Plugins)
 
 See [claude-code/README.md](claude-code/README.md) for full details and install commands.

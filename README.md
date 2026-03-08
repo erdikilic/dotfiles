@@ -115,9 +115,11 @@ cat vscode/extensions.txt | xargs -L 1 code --install-extension
 
 ---
 
-## Python (Ruff)
+## Linters & Formatters
 
-Base `ruff.toml` for Snakemake pipelines — copy and add project-specific `per-file-ignores` and `known-first-party`.
+- `ruff.toml` — Python (Snakemake pipelines). Copy and add project-specific `per-file-ignores` and `known-first-party`.
+- `rustfmt.toml` — Rust formatting (100 width, field/try shorthand).
+- `clippy.toml` — Rust lints (relaxed thresholds for arg count and type complexity).
 
 ---
 

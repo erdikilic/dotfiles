@@ -108,13 +108,6 @@ Personal dev environment — shell, editor, AI tools.
 
 </details>
 
-### Key Settings
-
-- Format on save: Python (Black, line-length 150), Rust (rustfmt), R
-- Auto organize imports (isort, profile=black)
-- Bracket pair colorization with guides
-- GitLens AI via Copilot (GPT-4.1)
-
 Install all extensions:
 ```bash
 cat vscode/extensions.txt | xargs -L 1 code --install-extension

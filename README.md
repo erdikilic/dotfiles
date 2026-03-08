@@ -115,6 +115,28 @@ cat vscode/extensions.txt | xargs -L 1 code --install-extension
 
 ---
 
+## Git
+
+- `gitconfig` — aliases (`s`, `l`, `lg`, `d`, `co`, `cb`, `undo`, `wip`), pull rebase, auto push upstream, histogram diff, zdiff3 merge conflicts.
+
+Symlink: `ln -sf $(pwd)/gitconfig ~/.gitconfig`
+
+---
+
+## Editor
+
+- `.editorconfig` — universal indent/whitespace rules. 4 spaces for Python/Rust/Snakemake, 2 for JS/TS/Svelte/YAML/JSON.
+
+---
+
+## Conda
+
+- `condarc` — conda-forge + bioconda, prefix.dev mirror, channel_priority disabled.
+
+Symlink: `ln -sf $(pwd)/condarc ~/.condarc`
+
+---
+
 ## Linters & Formatters
 
 - `ruff.toml` — Python (Snakemake pipelines). Copy and add project-specific `per-file-ignores` and `known-first-party`.

@@ -230,10 +230,6 @@ npm run setup
 - [awesome-claude-plugins](https://github.com/Chat2AnyLLM/awesome-claude-plugins) — Marketplace directory
 - [Hooks Guide (20+ examples)](https://dev.to/lukaszfryc/claude-code-hooks-complete-guide-with-20-ready-to-use-examples-2026-dcg)
 
-### Tauri / Desktop Dev
-- [tauri-plugin-mcp](https://github.com/P3GLEG/tauri-plugin-mcp) — AI agents debug inside Tauri apps
-- [claude-code-tauri-skills](https://playbooks.com/skills/dchuk/claude-code-tauri-skills/tauri-plugins) — Tauri plugin development skills
-
 ### Shell
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [Nerd Fonts](https://www.nerdfonts.com/)

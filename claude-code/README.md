@@ -92,11 +92,3 @@ claude plugin install ui-ux-pro-max@ui-ux-pro-max-skill
 cd ~/.claude/plugins/cache/playwright-skill/playwright-skill/*/skills/playwright-skill
 npm run setup
 ```
-
-## Resources
-
-- [Plugins Docs](https://code.claude.com/docs/en/discover-plugins) | [Skills Docs](https://code.claude.com/docs/en/skills) | [Hooks Docs](https://code.claude.com/docs/en/hooks)
-- [Official Plugin Marketplace](https://github.com/anthropics/claude-plugins-official)
-- [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) — Curated skills, hooks, agents, plugins
-- [awesome-claude-plugins](https://github.com/Chat2AnyLLM/awesome-claude-plugins) — Marketplace directory
-- [Hooks Guide (20+ examples)](https://dev.to/lukaszfryc/claude-code-hooks-complete-guide-with-20-ready-to-use-examples-2026-dcg)

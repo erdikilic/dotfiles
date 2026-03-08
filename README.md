@@ -126,7 +126,7 @@ cat vscode/extensions.txt | xargs -L 1 code --install-extension
 
 ## Claude Code
 
-See [claude-code/README.md](claude-code/README.md) — 22 plugins with install commands and resources.
+See [claude-code/README.md](claude-code/README.md) — 22 plugins with install commands.
 
 ---
 

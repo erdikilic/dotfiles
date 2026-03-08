@@ -1,23 +1,8 @@
-# Dev Toolkit
+# Dotfiles
 
-Personal dev environment — shell, editor, AI tools, themes, and templates.
+Personal dev environment — shell, editor, AI tools.
 
 **Stack:** Tauri/Svelte desktop apps, Rust CLI tools, Snakemake/Nextflow pipelines
-
-## Directory Structure
-
-```
-dotfiles/
-  vscode/
-    settings.json          # Editor settings, themes, formatting
-    keybindings.json       # Custom key bindings
-    extensions.txt         # Installed extensions list
-  shell/
-    zshrc                  # Zsh config (oh-my-zsh + powerlevel10k)
-    powerlevel10k/p10k.zsh # Prompt theme (rainbow, nerdfont, 1-line)
-  claude-code/
-    settings.json          # Plugin config & enabled plugins
-```
 
 ---
 
@@ -249,8 +234,6 @@ npm run setup
 - [tauri-plugin-mcp](https://github.com/P3GLEG/tauri-plugin-mcp) — AI agents debug inside Tauri apps
 - [claude-code-tauri-skills](https://playbooks.com/skills/dchuk/claude-code-tauri-skills/tauri-plugins) — Tauri plugin development skills
 
-### Shell Themes
+### Shell
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
-- [Oh My Posh](https://ohmyposh.dev/) | [Themes](https://ohmyposh.dev/docs/themes)
-- [Starship](https://starship.rs/) | [Presets](https://starship.rs/presets/)
 - [Nerd Fonts](https://www.nerdfonts.com/)

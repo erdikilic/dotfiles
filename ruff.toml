@@ -1,0 +1,35 @@
+line-length = 100
+target-version = "py310"
+builtins = ["snakemake"]
+
+[format]
+skip-magic-trailing-comma = true
+docstring-code-format = true
+
+[lint]
+select = [
+    "E",    # pycodestyle errors
+    "F",    # pyflakes
+    "W",    # pycodestyle warnings
+    "I",    # isort
+    "N",    # pep8-naming
+    "B",    # flake8-bugbear
+    "SIM",  # flake8-simplify
+    "UP",   # pyupgrade
+    "RUF",  # ruff-specific
+    "PTH",  # flake8-use-pathlib
+]
+ignore = [
+    "E501",   # line length handled by formatter
+]
+
+[lint.isort]
+split-on-trailing-comma = false
+# known-first-party = ["your_package"]  # set per project
+
+# [lint.per-file-ignores]
+# add per project as needed:
+#   Turkish text files: "RUF001", "RUF002", "RUF003"
+#   Taxonomy vars:      "N806"
+#   Late imports:       "E402"
+#   Intentional unused: "F841"

@@ -2,8 +2,6 @@
 
 Personal dev environment — shell, editor, AI tools.
 
-**Stack:** Tauri/Svelte desktop apps, Rust CLI tools, Snakemake/Nextflow pipelines
-
 ---
 
 ## Shell

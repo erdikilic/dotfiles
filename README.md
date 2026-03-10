@@ -152,28 +152,30 @@ See [claude-code/README.md](claude-code/README.md) for full details and install 
 <details>
 <summary>Plugin list</summary>
 
-- `github` — GitHub MCP (issues, PRs, branches, releases)
-- `commit-commands` — Quick commit, push, PR workflows
-- `code-review` — PR code review
-- `pr-review-toolkit` — Deep PR review (comments, tests, types, quality)
-- `pyright-lsp` — Python type checking
-- `rust-analyzer-lsp` — Rust analysis & completion
-- `typescript-lsp` — TypeScript/JavaScript type checking
-- `superpowers` — Core skills (debugging, TDD, planning, code review, parallel agents)
-- `feature-dev` — Guided feature development with codebase analysis
-- `taskmaster` — Task orchestration & dependency management
-- `code-simplifier` — Post-edit code cleanup & refactoring
-- `episodic-memory` — Auto-indexes conversations, semantic search across sessions
-- `claude-mem` — Persistent memory DB, make-plan/do workflow, AST smart-explore
-- `context7` — Live library documentation lookup
-- `playwright-skill` — Browser automation & E2E testing with Playwright
-- `frontend-design` — Production-grade frontend components (React, Svelte, Vue)
-- `ui-ux-pro-max` — 50 styles, 21 palettes, 50 font pairings, multi-framework
-- `security-guidance` — Warns about injection, XSS, unsafe patterns
-- `hookify` — Create custom hooks (auto-format, block dangerous commands)
-- `claude-md-management` — Audit & maintain CLAUDE.md project instructions
-- `playground` — Interactive single-file HTML playgrounds
-- `skill-creator` — Create, test, and evaluate custom skills
+| Plugin | Description |
+|--------|-------------|
+| `github` | GitHub MCP (issues, PRs, branches, releases) |
+| `commit-commands` | Quick commit, push, PR workflows |
+| `code-review` | PR code review |
+| `pr-review-toolkit` | Deep PR review (comments, tests, types, quality) |
+| `pyright-lsp` | Python type checking |
+| `rust-analyzer-lsp` | Rust analysis & completion |
+| `typescript-lsp` | TypeScript/JavaScript type checking |
+| `superpowers` | Core skills (debugging, TDD, planning, code review, parallel agents) |
+| `feature-dev` | Guided feature development with codebase analysis |
+| `taskmaster` | Task orchestration & dependency management |
+| `code-simplifier` | Post-edit code cleanup & refactoring |
+| `episodic-memory` | Auto-indexes conversations, semantic search across sessions |
+| `claude-mem` | Persistent memory DB, make-plan/do workflow, AST smart-explore |
+| `context7` | Live library documentation lookup |
+| `playwright-skill` | Browser automation & E2E testing with Playwright |
+| `frontend-design` | Production-grade frontend components (React, Svelte, Vue) |
+| `ui-ux-pro-max` | 50 styles, 21 palettes, 50 font pairings, multi-framework |
+| `security-guidance` | Warns about injection, XSS, unsafe patterns |
+| `hookify` | Create custom hooks (auto-format, block dangerous commands) |
+| `claude-md-management` | Audit & maintain CLAUDE.md project instructions |
+| `playground` | Interactive single-file HTML playgrounds |
+| `skill-creator` | Create, test, and evaluate custom skills |
 
 </details>
 

@@ -241,21 +241,18 @@ See [claude-code/README.md](claude-code/README.md) for full details and install 
 | `/episodic-memory:search-conversations` | Search previous conversations semantically |
 | `/episodic-memory:remembering-conversations` | Recall past approaches and solutions |
 
-**code-review** — `/code-review:code-review` — Code review a pull request
+**Single-command plugins**
 
-**pr-review-toolkit** — `/pr-review-toolkit:review-pr` — Comprehensive PR review using specialized agents
-
-**feature-dev** — `/feature-dev:feature-dev` — Guided feature development with architecture focus
-
-**frontend-design** — `/frontend-design:frontend-design` — Create production-grade frontend interfaces
-
-**ui-ux-pro-max** — `/ui-ux-pro-max:ui-ux-pro-max` — UI/UX design: 50 styles, 21 palettes, 50 font pairings, multiple frameworks
-
-**playground** — `/playground:playground` — Create interactive single-file HTML playgrounds
-
-**skill-creator** — `/skill-creator:skill-creator` — Create, modify, benchmark, and optimize skills
-
-**playwright-skill** — `/playwright-skill:playwright-skill` — Browser automation and testing with Playwright
+| Plugin | Command | Description |
+|--------|---------|-------------|
+| code-review | `/code-review:code-review` | Code review a pull request |
+| pr-review-toolkit | `/pr-review-toolkit:review-pr` | Comprehensive PR review using specialized agents |
+| feature-dev | `/feature-dev:feature-dev` | Guided feature development with architecture focus |
+| frontend-design | `/frontend-design:frontend-design` | Create production-grade frontend interfaces |
+| ui-ux-pro-max | `/ui-ux-pro-max:ui-ux-pro-max` | UI/UX design: 50 styles, 21 palettes, 50 font pairings, multiple frameworks |
+| playground | `/playground:playground` | Create interactive single-file HTML playgrounds |
+| skill-creator | `/skill-creator:skill-creator` | Create, modify, benchmark, and optimize skills |
+| playwright-skill | `/playwright-skill:playwright-skill` | Browser automation and testing with Playwright |
 
 **Standalone**
 

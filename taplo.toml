@@ -1,0 +1,12 @@
+include = ["**/*.toml"]
+exclude = ["**/node_modules/**", "target/**"]
+
+[formatting]
+align_entries = false
+align_comments = true
+column_width = 100
+indent_string = "  "
+reorder_keys = false
+array_trailing_comma = true
+trailing_newline = true
+crlf = false

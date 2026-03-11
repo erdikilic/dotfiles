@@ -142,6 +142,9 @@ Symlink: `ln -sf $(pwd)/condarc ~/.condarc`
 - `ruff.toml` — Python (Snakemake pipelines). Copy and add project-specific `per-file-ignores` and `known-first-party`.
 - `rustfmt.toml` — Rust formatting (100 width, field/try shorthand).
 - `clippy.toml` — Rust lints (relaxed thresholds for arg count and type complexity).
+- `taplo.toml` — TOML formatting (100 width, 2-space indent).
+- `.markdownlint.json` — Markdown linting (relaxed for inline HTML and line length).
+- `.hadolint.yaml` — Dockerfile linting (warns on untrusted registries, relaxed version pinning).
 
 ---
 

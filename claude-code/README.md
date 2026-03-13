@@ -1,4 +1,4 @@
-# Claude Code (21 Plugins + 4 MCPs)
+# Claude Code (22 Plugins + 4 MCPs)
 
 ### Git & GitHub
 
@@ -23,6 +23,7 @@
 |--------|--------|-------------|
 | superpowers | [superpowers-marketplace](https://github.com/obra/superpowers) | Core skills: debugging, TDD, planning, code review, git worktrees, parallel agents |
 | feature-dev | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev) | Guided feature development with codebase analysis |
+| taskmaster | [taskmaster](https://github.com/eyaltoledano/claude-task-master) | Task orchestration & dependency management |
 | code-simplifier | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier) | Post-edit code cleanup & refactoring |
 
 ### Memory & Context

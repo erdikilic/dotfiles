@@ -5,7 +5,6 @@
     "rust-analyzer-lsp@claude-plugins-official": true,
     "claude-mem@thedotmack": true,
     "claude-md-management@claude-plugins-official": true,
-    "taskmaster@taskmaster": true,
     "code-review@claude-plugins-official": true,
     "superpowers@superpowers-marketplace": true,
     "episodic-memory@superpowers-marketplace": true,

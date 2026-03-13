@@ -148,9 +148,9 @@ Symlink: `ln -sf $(pwd)/condarc ~/.condarc`
 
 ---
 
-## Claude Code (22 Plugins)
+## Claude Code (21 Plugins + 4 MCPs)
 
-See [claude-code/README.md](claude-code/README.md) for full details and install commands.
+See [claude-code/README.md](claude-code/README.md) for full details.
 
 <details>
 <summary>Plugin list</summary>
@@ -166,7 +166,6 @@ See [claude-code/README.md](claude-code/README.md) for full details and install 
 | `typescript-lsp` | TypeScript/JavaScript type checking |
 | `superpowers` | Core skills (debugging, TDD, planning, code review, parallel agents) |
 | `feature-dev` | Guided feature development with codebase analysis |
-| `taskmaster` | Task orchestration & dependency management |
 | `code-simplifier` | Post-edit code cleanup & refactoring |
 | `episodic-memory` | Auto-indexes conversations, semantic search across sessions |
 | `claude-mem` | Persistent memory DB, make-plan/do workflow, AST smart-explore |
@@ -277,9 +276,11 @@ Plugins that provide tools via Model Context Protocol (used automatically, no sl
 |--------|-------------|
 | `github` | GitHub API — PRs, issues, code search, repo management |
 | `context7` | Up-to-date library documentation and code examples |
-| `taskmaster` | Task creation, tracking, and orchestration for AI-driven dev |
 | `episodic-memory` | Semantic search across past Claude Code conversations |
 | `claude-mem` | Persistent cross-session memory with observation logging |
+| `task-master-ai` | Task orchestration & dependency management |
+| `svelte` | Svelte documentation, examples, playground links, autofixer |
+| `shadcn` | shadcn/ui component registry search, examples, audit checklists |
 
 </details>
 

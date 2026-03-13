@@ -1,10 +1,10 @@
-# Claude Code (22 Plugins)
+# Claude Code (21 Plugins + 4 MCPs)
 
 ### Git & GitHub
 
 | Plugin | Source | Description |
 |--------|--------|-------------|
-| github | [official](https://github.com/anthropics/claude-plugins-official) | GitHub MCP — issues, PRs, branches, releases |
+| github | [github](https://github.com/github/github-mcp-server) | GitHub MCP — issues, PRs, branches, releases |
 | commit-commands | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/commit-commands) | Quick commit, push, PR workflows |
 | code-review | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review) | PR code review |
 | pr-review-toolkit | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pr-review-toolkit) | Deep PR review — comments, tests, error handling, types, quality |
@@ -21,18 +21,17 @@
 
 | Plugin | Source | Description |
 |--------|--------|-------------|
-| superpowers | [superpowers-marketplace](https://github.com/jlowin/superpowers) | Core skills: debugging, TDD, planning, code review, git worktrees, parallel agents |
+| superpowers | [superpowers-marketplace](https://github.com/obra/superpowers) | Core skills: debugging, TDD, planning, code review, git worktrees, parallel agents |
 | feature-dev | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev) | Guided feature development with codebase analysis |
-| taskmaster | [taskmaster](https://github.com/eyaltoledano/claude-taskmaster) | Task orchestration & dependency management |
 | code-simplifier | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier) | Post-edit code cleanup & refactoring |
 
 ### Memory & Context
 
 | Plugin | Source | Description |
 |--------|--------|-------------|
-| episodic-memory | [superpowers-marketplace](https://github.com/jlowin/superpowers) | Auto-indexes conversations, semantic search across sessions |
+| episodic-memory | [superpowers-marketplace](https://github.com/obra/episodic-memory) | Auto-indexes conversations, semantic search across sessions |
 | claude-mem | [thedotmack](https://github.com/thedotmack/claude-mem) | Persistent memory DB, make-plan/do workflow, AST-based smart-explore |
-| context7 | [official](https://github.com/anthropics/claude-plugins-official) | Live library documentation lookup |
+| context7 | [upstash](https://github.com/upstash/context7) | Live library documentation lookup |
 
 ### Testing
 
@@ -62,33 +61,13 @@
 | playground | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/playground) | Interactive single-file HTML playgrounds |
 | skill-creator | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator) | Create, test, and evaluate custom skills |
 
-## Quick Install
+### Standalone MCP Servers
 
-```bash
-# Official marketplace
-claude plugin install github commit-commands code-review pr-review-toolkit
-claude plugin install pyright-lsp rust-analyzer-lsp typescript-lsp
-claude plugin install feature-dev code-simplifier
-claude plugin install context7 claude-md-management
-claude plugin install security-guidance hookify
-claude plugin install playground skill-creator
+Configured via `claude mcp add`, not as plugins.
 
-# Third-party marketplaces
-claude plugin marketplace add superpowers-marketplace
-claude plugin marketplace add eyaltoledano/claude-taskmaster
-claude plugin marketplace add thedotmack/claude-mem
-claude plugin marketplace add lackeyjb/playwright-skill
-claude plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill
-
-# Install from third-party
-claude plugin install superpowers@superpowers-marketplace
-claude plugin install episodic-memory@superpowers-marketplace
-claude plugin install taskmaster@taskmaster
-claude plugin install claude-mem@thedotmack
-claude plugin install playwright-skill@playwright-skill
-claude plugin install ui-ux-pro-max@ui-ux-pro-max-skill
-
-# Playwright setup (downloads Chromium)
-cd ~/.claude/plugins/cache/playwright-skill/playwright-skill/*/skills/playwright-skill
-npm run setup
-```
+| Server | Command | Source | Description |
+|--------|---------|--------|-------------|
+| task-master-ai | `npx -y task-master-ai` | [eyaltoledano/claude-task-master](https://github.com/eyaltoledano/claude-task-master) | Task orchestration & dependency management |
+| svelte | `npx -y @sveltejs/mcp` | [sveltejs/mcp](https://github.com/sveltejs/mcp) | Official Svelte docs, examples, autofixer |
+| shadcn | `npx shadcn@latest mcp` | [shadcn-ui/ui](https://github.com/shadcn-ui/ui) | shadcn/ui component search, examples, audit |
+| context7 | `npx -y @upstash/context7-mcp` | [upstash/context7](https://github.com/upstash/context7) | Standalone context7 with API key support |

@@ -65,7 +65,7 @@ Configured via `claude mcp add --scope user`, not as plugins.
 | playwright | `npx @playwright/mcp@latest` | [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | Official Playwright browser automation & E2E testing |
 | svelte | `npx -y @sveltejs/mcp` | [sveltejs/mcp](https://github.com/sveltejs/mcp) | Official Svelte docs, examples, autofixer |
 | shadcn | `npx shadcn@latest mcp` | [shadcn-ui/ui](https://github.com/shadcn-ui/ui) | shadcn/ui component search, examples, audit |
-| context7 | `npx -y @upstash/context7-mcp` | [upstash/context7](https://github.com/upstash/context7) | Standalone context7 with API key support |
+| context7 | `npx -y @upstash/context7-mcp --api-key KEY` | [upstash/context7](https://github.com/upstash/context7) | Standalone context7 with API key support |
 
 ### Quick Install
 
@@ -78,5 +78,5 @@ claude mcp add --scope user task-master-ai -- npx -y task-master-ai@latest
 claude mcp add --scope user playwright -- npx @playwright/mcp@latest
 claude mcp add --scope user svelte -- npx -y @sveltejs/mcp
 claude mcp add --scope user shadcn -- npx shadcn@latest mcp
-claude mcp add --scope user context7 -- npx -y @upstash/context7-mcp
+claude mcp add --scope user context7 -- npx -y @upstash/context7-mcp --api-key YOUR_API_KEY
 ```

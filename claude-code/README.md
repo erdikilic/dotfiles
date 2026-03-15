@@ -1,4 +1,4 @@
-# Claude Code (22 Plugins + 4 MCPs)
+# Claude Code (20 Plugins + 5 MCPs)
 
 ### Git & GitHub
 
@@ -23,7 +23,6 @@
 |--------|--------|-------------|
 | superpowers | [superpowers-marketplace](https://github.com/obra/superpowers) | Core skills: debugging, TDD, planning, code review, git worktrees, parallel agents |
 | feature-dev | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev) | Guided feature development with codebase analysis |
-| taskmaster | [taskmaster](https://github.com/eyaltoledano/claude-task-master) | Task orchestration & dependency management |
 | code-simplifier | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier) | Post-edit code cleanup & refactoring |
 
 ### Memory & Context
@@ -33,12 +32,6 @@
 | episodic-memory | [superpowers-marketplace](https://github.com/obra/episodic-memory) | Auto-indexes conversations, semantic search across sessions |
 | claude-mem | [thedotmack](https://github.com/thedotmack/claude-mem) | Persistent memory DB, make-plan/do workflow, AST-based smart-explore |
 | context7 | [upstash](https://github.com/upstash/context7) | Live library documentation lookup |
-
-### Testing
-
-| Plugin | Source | Description |
-|--------|--------|-------------|
-| playwright-skill | [lackeyjb](https://github.com/lackeyjb/playwright-skill) | Browser automation & E2E testing with Playwright |
 
 ### UI & Design
 
@@ -64,11 +57,26 @@
 
 ### Standalone MCP Servers
 
-Configured via `claude mcp add`, not as plugins.
+Configured via `claude mcp add --scope user`, not as plugins.
 
 | Server | Command | Source | Description |
 |--------|---------|--------|-------------|
-| task-master-ai | `npx -y task-master-ai` | [eyaltoledano/claude-task-master](https://github.com/eyaltoledano/claude-task-master) | Task orchestration & dependency management |
+| task-master-ai | `npx -y task-master-ai@latest` | [eyaltoledano/claude-task-master](https://github.com/eyaltoledano/claude-task-master) | Task orchestration & dependency management |
+| playwright | `npx @playwright/mcp@latest` | [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | Official Playwright browser automation & E2E testing |
 | svelte | `npx -y @sveltejs/mcp` | [sveltejs/mcp](https://github.com/sveltejs/mcp) | Official Svelte docs, examples, autofixer |
 | shadcn | `npx shadcn@latest mcp` | [shadcn-ui/ui](https://github.com/shadcn-ui/ui) | shadcn/ui component search, examples, audit |
 | context7 | `npx -y @upstash/context7-mcp` | [upstash/context7](https://github.com/upstash/context7) | Standalone context7 with API key support |
+
+### Quick Install
+
+```bash
+# Copy settings
+cp claude-code/settings.json ~/.claude/settings.json
+
+# Add MCP servers (user scope)
+claude mcp add --scope user task-master-ai -- npx -y task-master-ai@latest
+claude mcp add --scope user playwright -- npx @playwright/mcp@latest
+claude mcp add --scope user svelte -- npx -y @sveltejs/mcp
+claude mcp add --scope user shadcn -- npx shadcn@latest mcp
+claude mcp add --scope user context7 -- npx -y @upstash/context7-mcp
+```

@@ -1,4 +1,4 @@
-# Claude Code (20 Plugins + 5 MCPs)
+# Claude Code (24 Plugins + 5 MCPs)
 
 ### Git & GitHub
 
@@ -24,6 +24,8 @@
 | superpowers | [superpowers-marketplace](https://github.com/obra/superpowers) | Core skills: debugging, TDD, planning, code review, git worktrees, parallel agents |
 | feature-dev | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev) | Guided feature development with codebase analysis |
 | code-simplifier | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier) | Post-edit code cleanup & refactoring |
+| claude-code-setup | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup) | Analyze codebases & recommend tailored hooks, skills, MCPs |
+| double-shot-latte | [superpowers-marketplace](https://github.com/obra/superpowers-marketplace) | Auto-continue without "Would you like me to continue?" prompts |
 
 ### Memory & Context
 
@@ -45,6 +47,7 @@
 | Plugin | Source | Description |
 |--------|--------|-------------|
 | security-guidance | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance) | Warns about injection, XSS, unsafe patterns |
+| semgrep | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/semgrep) | Real-time security vulnerability detection & secure code guidance |
 | hookify | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/hookify) | Create custom hooks — auto-format, block dangerous commands |
 | claude-md-management | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management) | Audit & maintain CLAUDE.md project instructions |
 
@@ -54,6 +57,7 @@
 |--------|--------|-------------|
 | playground | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/playground) | Interactive single-file HTML playgrounds |
 | skill-creator | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator) | Create, test, and evaluate custom skills |
+| sourcegraph | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/sourcegraph) | Code search & reference tracing across repositories |
 
 ### Standalone MCP Servers
 

@@ -1,4 +1,4 @@
-# Claude Code (25 Plugins + 7 MCPs)
+# Claude Code (23 Plugins + 5 MCPs)
 
 ### Git & GitHub
 
@@ -26,7 +26,7 @@
 | code-simplifier | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier) | Post-edit code cleanup & refactoring |
 | claude-code-setup | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup) | Analyze codebases & recommend tailored hooks, skills, MCPs |
 | taskmaster | [taskmaster](https://github.com/eyaltoledano/claude-task-master) | Task orchestration & dependency management |
-| double-shot-latte | [superpowers-marketplace](https://github.com/obra/superpowers-marketplace) | Auto-continue without "Would you like me to continue?" prompts |
+| double-shot-latte | [superpowers-marketplace](https://github.com/obra/superpowers-marketplace) | Auto-continue without "Would you like me to continue?" prompts (disabled) |
 
 ### Memory & Context
 
@@ -48,7 +48,6 @@
 | Plugin | Source | Description |
 |--------|--------|-------------|
 | security-guidance | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance) | Warns about injection, XSS, unsafe patterns |
-| semgrep | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/semgrep) | Real-time security vulnerability detection & secure code guidance |
 | hookify | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/hookify) | Create custom hooks — auto-format, block dangerous commands |
 | claude-md-management | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management) | Audit & maintain CLAUDE.md project instructions |
 
@@ -58,7 +57,6 @@
 |--------|--------|-------------|
 | playground | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/playground) | Interactive single-file HTML playgrounds |
 | skill-creator | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator) | Create, test, and evaluate custom skills |
-| sourcegraph | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/sourcegraph) | Code search & reference tracing across repositories |
 
 ### Standalone MCP Servers
 
@@ -71,8 +69,6 @@ Configured via `claude mcp add --scope user`, not as plugins.
 | svelte | `npx -y @sveltejs/mcp` | [sveltejs/mcp](https://github.com/sveltejs/mcp) | Official Svelte docs, examples, autofixer |
 | shadcn | `npx shadcn@latest mcp` | [shadcn-ui/ui](https://github.com/shadcn-ui/ui) | shadcn/ui component search, examples, audit |
 | context7 | `npx -y @upstash/context7-mcp --api-key KEY` | [upstash/context7](https://github.com/upstash/context7) | Standalone context7 with API key support |
-| semgrep | `semgrep mcp` | [semgrep docs](https://semgrep.dev/docs/mcp) | Security scanning & vulnerability detection (requires `semgrep login`) |
-| sourcegraph | HTTP: `INSTANCE/.api/mcp` | [sourcegraph docs](https://sourcegraph.com/docs/api/mcp) | Code search & reference tracing (requires instance URL + token) |
 
 ### Quick Install
 
@@ -101,9 +97,6 @@ claude plugin install hookify@claude-plugins-official
 claude plugin install claude-md-management@claude-plugins-official
 claude plugin install playground@claude-plugins-official
 claude plugin install skill-creator@claude-plugins-official
-claude plugin install semgrep@claude-plugins-official
-claude plugin install sourcegraph@claude-plugins-official
-
 # Install plugins — third-party marketplaces
 claude plugin install superpowers@superpowers-marketplace
 claude plugin install episodic-memory@superpowers-marketplace
@@ -118,8 +111,23 @@ claude mcp add --scope user playwright -- npx @playwright/mcp@latest
 claude mcp add --scope user svelte -- npx -y @sveltejs/mcp
 claude mcp add --scope user shadcn -- npx shadcn@latest mcp
 claude mcp add --scope user context7 -- npx -y @upstash/context7-mcp --api-key YOUR_API_KEY
+```
+
+### Available (Not Installed)
+
+Useful plugins and MCP servers that can be added later.
+
+| Name | Type | Source | Description |
+|------|------|--------|-------------|
+| semgrep | plugin + MCP | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/semgrep) / [docs](https://semgrep.dev/docs/mcp) | Real-time security vulnerability detection & secure code guidance |
+| sourcegraph | plugin + MCP | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/sourcegraph) / [docs](https://sourcegraph.com/docs/api/mcp) | Code search & reference tracing across repositories |
+
+```bash
 # Semgrep (requires: brew install semgrep && semgrep login)
+claude plugin install semgrep@claude-plugins-official
 claude mcp add --scope user semgrep -- semgrep mcp
+
 # Sourcegraph (requires: instance URL + access token)
+claude plugin install sourcegraph@claude-plugins-official
 claude mcp add --transport http --scope user sourcegraph https://INSTANCE/.api/mcp --header "Authorization: token YOUR_TOKEN"
 ```

@@ -148,7 +148,7 @@ Symlink: `ln -sf $(pwd)/condarc ~/.condarc`
 
 ---
 
-## Claude Code (22 Plugins + 4 MCPs)
+## Claude Code (25 Plugins + 7 MCPs)
 
 See [claude-code/README.md](claude-code/README.md) for full details.
 
@@ -166,24 +166,27 @@ See [claude-code/README.md](claude-code/README.md) for full details.
 | `typescript-lsp` | TypeScript/JavaScript type checking |
 | `superpowers` | Core skills (debugging, TDD, planning, code review, parallel agents) |
 | `feature-dev` | Guided feature development with codebase analysis |
-| `taskmaster` | Task orchestration & dependency management |
 | `code-simplifier` | Post-edit code cleanup & refactoring |
+| `taskmaster` | Task orchestration & dependency management |
+| `claude-code-setup` | Analyze codebases & recommend tailored hooks, skills, MCPs |
+| `double-shot-latte` | Auto-continue without "Would you like me to continue?" prompts |
 | `episodic-memory` | Auto-indexes conversations, semantic search across sessions |
 | `claude-mem` | Persistent memory DB, make-plan/do workflow, AST smart-explore |
 | `context7` | Live library documentation lookup |
-| `playwright-skill` | Browser automation & E2E testing with Playwright |
 | `frontend-design` | Production-grade frontend components (React, Svelte, Vue) |
 | `ui-ux-pro-max` | 50 styles, 21 palettes, 50 font pairings, multi-framework |
 | `security-guidance` | Warns about injection, XSS, unsafe patterns |
+| `semgrep` | Real-time security vulnerability detection & secure code guidance |
 | `hookify` | Create custom hooks (auto-format, block dangerous commands) |
 | `claude-md-management` | Audit & maintain CLAUDE.md project instructions |
 | `playground` | Interactive single-file HTML playgrounds |
 | `skill-creator` | Create, test, and evaluate custom skills |
+| `sourcegraph` | Code search & reference tracing across repositories |
 
 </details>
 
 <details>
-<summary>Skills / Slash Commands (47)</summary>
+<summary>Skills / Slash Commands (50)</summary>
 
 **superpowers**
 
@@ -255,7 +258,9 @@ See [claude-code/README.md](claude-code/README.md) for full details.
 | ui-ux-pro-max | `/ui-ux-pro-max:ui-ux-pro-max` | UI/UX design: 50 styles, 21 palettes, 50 font pairings, multiple frameworks |
 | playground | `/playground:playground` | Create interactive single-file HTML playgrounds |
 | skill-creator | `/skill-creator:skill-creator` | Create, modify, benchmark, and optimize skills |
-| playwright-skill | `/playwright-skill:playwright-skill` | Browser automation and testing with Playwright |
+| claude-code-setup | `/claude-code-setup:claude-automation-recommender` | Analyze codebase & recommend Claude Code automations |
+| semgrep-plugin | `/semgrep-plugin:setup-semgrep-plugin` | Set up Semgrep plugin (install, authenticate, verify) |
+| sourcegraph | `/sourcegraph:sg-search`, `/sourcegraph:sg-file` | Search & read files from Sourcegraph |
 
 **Standalone**
 
@@ -282,6 +287,9 @@ Plugins that provide tools via Model Context Protocol (used automatically, no sl
 | `task-master-ai` | Task orchestration & dependency management |
 | `svelte` | Svelte documentation, examples, playground links, autofixer |
 | `shadcn` | shadcn/ui component registry search, examples, audit checklists |
+| `playwright` | Official Playwright browser automation & E2E testing |
+| `semgrep` | Security scanning & vulnerability detection |
+| `sourcegraph` | Code search & reference tracing across repositories |
 
 </details>
 

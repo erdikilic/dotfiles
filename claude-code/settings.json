@@ -23,7 +23,8 @@
     "claude-code-setup@claude-plugins-official": true,
     "double-shot-latte@superpowers-marketplace": true,
     "semgrep@claude-plugins-official": true,
-    "sourcegraph@claude-plugins-official": true
+    "sourcegraph@claude-plugins-official": true,
+    "taskmaster@taskmaster": true
   },
   "extraKnownMarketplaces": {
     "ui-ux-pro-max-skill": {

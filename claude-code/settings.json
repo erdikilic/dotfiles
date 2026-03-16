@@ -21,9 +21,7 @@
     "playground@claude-plugins-official": true,
     "skill-creator@claude-plugins-official": true,
     "claude-code-setup@claude-plugins-official": true,
-    "double-shot-latte@superpowers-marketplace": true,
-    "semgrep@claude-plugins-official": true,
-    "sourcegraph@claude-plugins-official": true,
+    "double-shot-latte@superpowers-marketplace": false,
     "taskmaster@taskmaster": true
   },
   "extraKnownMarketplaces": {

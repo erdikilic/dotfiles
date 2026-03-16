@@ -186,7 +186,7 @@ See [claude-code/README.md](claude-code/README.md) for full details.
 </details>
 
 <details>
-<summary>Skills / Slash Commands (50)</summary>
+<summary>Skills / Slash Commands (90)</summary>
 
 **superpowers**
 
@@ -246,6 +246,57 @@ See [claude-code/README.md](claude-code/README.md) for full details.
 |---------|-------------|
 | `/episodic-memory:search-conversations` | Search previous conversations semantically |
 | `/episodic-memory:remembering-conversations` | Recall past approaches and solutions |
+
+**taskmaster**
+
+| Command | Description |
+|---------|-------------|
+| `/taskmaster:smart-workflow` | Auto-detect next action and execute the right workflow |
+| `/taskmaster:init-project` | Initialize a new Task Master project |
+| `/taskmaster:init-project-quick` | Quick project initialization with defaults |
+| `/taskmaster:parse-prd` | Parse a PRD into tasks |
+| `/taskmaster:parse-prd-with-research` | Parse PRD with web research for better task generation |
+| `/taskmaster:next-task` | Show the next task to work on |
+| `/taskmaster:auto-implement-tasks` | Automatically implement pending tasks |
+| `/taskmaster:list-tasks` | List all tasks |
+| `/taskmaster:list-tasks-by-status` | List tasks filtered by status |
+| `/taskmaster:list-tasks-with-subtasks` | List tasks with their subtasks |
+| `/taskmaster:show-task` | Show details of a specific task |
+| `/taskmaster:add-task` | Add a new task |
+| `/taskmaster:update-task` | Update a task's details |
+| `/taskmaster:update-single-task` | Update a single task field |
+| `/taskmaster:update-tasks-from-id` | Batch update tasks starting from a given ID |
+| `/taskmaster:remove-task` | Remove a task |
+| `/taskmaster:expand-task` | Expand a task into subtasks |
+| `/taskmaster:expand-all-tasks` | Expand all pending tasks into subtasks |
+| `/taskmaster:add-subtask` | Add a subtask to a task |
+| `/taskmaster:remove-subtask` | Remove a specific subtask |
+| `/taskmaster:remove-subtasks` | Remove multiple subtasks |
+| `/taskmaster:remove-all-subtasks` | Remove all subtasks from a task |
+| `/taskmaster:convert-task-to-subtask` | Convert a standalone task into a subtask |
+| `/taskmaster:to-pending` | Set task status to pending |
+| `/taskmaster:to-in-progress` | Set task status to in-progress |
+| `/taskmaster:to-review` | Set task status to review |
+| `/taskmaster:to-done` | Set task status to done |
+| `/taskmaster:to-cancelled` | Set task status to cancelled |
+| `/taskmaster:to-deferred` | Set task status to deferred |
+| `/taskmaster:add-dependency` | Add a dependency between tasks |
+| `/taskmaster:remove-dependency` | Remove a dependency between tasks |
+| `/taskmaster:validate-dependencies` | Validate task dependency graph |
+| `/taskmaster:fix-dependencies` | Auto-fix invalid dependencies |
+| `/taskmaster:analyze-project` | Analyze project structure and codebase |
+| `/taskmaster:analyze-complexity` | Analyze task complexity |
+| `/taskmaster:complexity-report` | Generate a complexity report |
+| `/taskmaster:project-status` | Show overall project status |
+| `/taskmaster:setup-models` | Configure AI model settings |
+| `/taskmaster:view-models` | View current model configuration |
+| `/taskmaster:sync-readme` | Sync README with current task state |
+| `/taskmaster:command-pipeline` | Run a sequence of taskmaster commands |
+| `/taskmaster:install-taskmaster` | Install Task Master |
+| `/taskmaster:quick-install-taskmaster` | Quick install with defaults |
+| `/taskmaster:help` | Get help with taskmaster commands |
+| `/taskmaster:learn` | Learn about taskmaster concepts and workflows |
+| `/taskmaster:tm-main` | Main taskmaster entry point |
 
 **Single-command plugins**
 

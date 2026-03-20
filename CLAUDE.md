@@ -15,7 +15,7 @@ A personal dotfiles/toolkit repo for syncing dev environment configs across mach
 - `shell/` — Zsh config (oh-my-zsh + powerlevel10k), PATH setup for conda/mamba/nvm/pixi/bun
 - `vscode/` — Settings, keybindings, and extension list (install via `cat vscode/extensions.txt | xargs -L 1 code --install-extension`)
 - `claude-code/` — Claude Code `settings.json` (copy to `~/.claude/settings.json`) and plugin README with install commands
-- Root configs — `gitconfig`, `condarc`, `.editorconfig`, `ruff.toml`, `rustfmt.toml`, `clippy.toml`
+- Root configs — `gitconfig`, `condarc`, `.editorconfig`, `ruff.toml`, `rustfmt.toml`, `clippy.toml`, `taplo.toml`, `biome.json`, `.markdownlint.json`, `.hadolint.yaml`
 
 ## Conventions
 
@@ -28,5 +28,6 @@ A personal dotfiles/toolkit repo for syncing dev environment configs across mach
 
 - **Claude Code plugins changed** → Update both `claude-code/settings.json` and `claude-code/README.md` (keep the categorized table format and Quick Install section)
 - **VSCode extensions changed** → Update `vscode/extensions.txt` (one extension ID per line)
+- **Linter/formatter configs changed** → Update the root config file and the corresponding section in `README.md`
 - **Shell config changed** → Only edit `shell/zshrc`; don't touch `shell/powerlevel10k/` (generated config)
 - **README.md** → Keep the expandable sections format with `<details>` tags

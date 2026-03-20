@@ -1,4 +1,4 @@
-# Claude Code (23 Plugins + 5 MCPs)
+# Claude Code (24 Plugins + 5 MCPs)
 
 ### Git & GitHub
 
@@ -57,6 +57,7 @@
 |--------|--------|-------------|
 | playground | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/playground) | Interactive single-file HTML playgrounds |
 | skill-creator | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator) | Create, test, and evaluate custom skills |
+| claude-hud | [claude-hud](https://github.com/jarrodwatts/claude-hud) | Status line HUD — model, cost, tokens, project info |
 
 ### Standalone MCP Servers
 
@@ -78,6 +79,7 @@ claude plugin marketplace add obra/superpowers-marketplace
 claude plugin marketplace add eyaltoledano/claude-task-master
 claude plugin marketplace add thedotmack/claude-mem
 claude plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill
+claude plugin marketplace add jarrodwatts/claude-hud
 
 # 2. Install plugins — official marketplace
 claude plugin install github@claude-plugins-official
@@ -104,6 +106,7 @@ claude plugin install double-shot-latte@superpowers-marketplace
 claude plugin install taskmaster@taskmaster
 claude plugin install claude-mem@thedotmack
 claude plugin install ui-ux-pro-max@ui-ux-pro-max-skill
+claude plugin install claude-hud@claude-hud
 
 # 3. Add standalone MCP servers (user scope)
 claude mcp add --scope user task-master-ai -- npx -y task-master-ai@latest

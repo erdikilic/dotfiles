@@ -148,7 +148,7 @@ Symlink: `ln -sf $(pwd)/condarc ~/.condarc`
 
 ---
 
-## Claude Code (23 Plugins + 5 MCPs)
+## Claude Code (24 Plugins + 5 MCPs)
 
 See [claude-code/README.md](claude-code/README.md) for full details.
 
@@ -180,11 +180,12 @@ See [claude-code/README.md](claude-code/README.md) for full details.
 | `claude-md-management` | Audit & maintain CLAUDE.md project instructions |
 | `playground` | Interactive single-file HTML playgrounds |
 | `skill-creator` | Create, test, and evaluate custom skills |
+| `claude-hud` | Status line HUD — model, cost, tokens, project info |
 
 </details>
 
 <details>
-<summary>Skills / Slash Commands (87)</summary>
+<summary>Skills / Slash Commands (91)</summary>
 
 **superpowers**
 
@@ -222,6 +223,7 @@ See [claude-code/README.md](claude-code/README.md) for full details.
 | `/claude-mem:make-plan` | Create phased implementation plans with doc discovery |
 | `/claude-mem:do` | Execute phased plans using subagents |
 | `/claude-mem:smart-explore` | Token-optimized code exploration via AST parsing |
+| `/claude-mem:timeline-report` | Generate project development history/timeline reports |
 
 **commit-commands**
 
@@ -296,6 +298,13 @@ See [claude-code/README.md](claude-code/README.md) for full details.
 | `/taskmaster:learn` | Learn about taskmaster concepts and workflows |
 | `/taskmaster:tm-main` | Main taskmaster entry point |
 
+**claude-hud**
+
+| Command | Description |
+|---------|-------------|
+| `/claude-hud:setup` | Configure claude-hud as your status line |
+| `/claude-hud:configure` | Configure HUD display options (layout, presets, elements) |
+
 **Single-command plugins**
 
 | Plugin | Command | Description |
@@ -317,6 +326,7 @@ See [claude-code/README.md](claude-code/README.md) for full details.
 | `/loop` | Run a command on a recurring interval (e.g., `/loop 5m /foo`) |
 | `/claude-api` | Help building apps with Claude API/Anthropic SDK |
 | `/keybindings-help` | Customize Claude Code keyboard shortcuts |
+| `/update-config` | Configure Claude Code settings.json (hooks, permissions, env vars) |
 
 </details>
 

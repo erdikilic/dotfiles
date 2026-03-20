@@ -22,13 +22,21 @@
     "skill-creator@claude-plugins-official": true,
     "claude-code-setup@claude-plugins-official": true,
     "double-shot-latte@superpowers-marketplace": false,
-    "taskmaster@taskmaster": true
+    "taskmaster@taskmaster": true,
+    "claude-hud@claude-hud": true
   },
   "extraKnownMarketplaces": {
     "ui-ux-pro-max-skill": {
       "source": {
         "source": "github",
         "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
+      },
+      "autoUpdate": true
+    },
+    "claude-hud": {
+      "source": {
+        "source": "github",
+        "repo": "jarrodwatts/claude-hud"
       },
       "autoUpdate": true
     }

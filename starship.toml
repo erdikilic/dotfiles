@@ -1,0 +1,150 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+add_newline = false
+
+format = """
+[](color_orange)$os[](fg:color_orange bg:color_yellow)$directory[](fg:color_yellow bg:color_aqua)$git_branch$git_status[](fg:color_aqua bg:color_blue)$python$rust$nodejs[](fg:color_blue bg:color_bg3)$docker_context${custom.nextflow}${custom.snakemake}[](fg:color_bg3) """
+
+right_format = """[](fg:color_bg3)$status$cmd_duration[](fg:color_green bg:color_bg3)$conda[](fg:color_bg1 bg:color_green)$username$hostname[](fg:color_bg1)"""
+
+palette = 'gruvbox_dark'
+
+[palettes.gruvbox_dark]
+color_fg0 = '#fbf1c7'
+color_bg1 = '#3c3836'
+color_bg3 = '#665c54'
+color_blue = '#458588'
+color_aqua = '#689d6a'
+color_green = '#98971a'
+color_orange = '#d65d0e'
+color_purple = '#b16286'
+color_red = '#cc241d'
+color_yellow = '#d79921'
+
+# --- CONDA (first segment, prominent) ---
+
+[conda]
+symbol = ''
+style = 'bg:color_green fg:color_fg0'
+format = '[ $symbol $environment ]($style)'
+ignore_base = false
+
+# --- OS ---
+
+[os]
+disabled = false
+style = 'bg:color_orange fg:color_fg0'
+
+[os.symbols]
+Ubuntu = ""
+Linux = ""
+Arch = ""
+Debian = ""
+Fedora = ""
+Manjaro = ""
+Mint = ""
+Pop = ""
+
+# --- DIRECTORY ---
+
+[directory]
+style = 'fg:color_fg0 bg:color_yellow'
+format = '[ $path ]($style)'
+repo_root_format = '[ $before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path ]($style)'
+repo_root_style = 'bold fg:color_fg0 bg:color_yellow'
+before_repo_root_style = 'fg:color_fg0 bg:color_yellow'
+truncation_length = 100
+truncate_to_repo = false
+fish_style_pwd_dir_length = 0
+truncation_symbol = '…/'
+
+# --- GIT ---
+
+[git_branch]
+symbol = ''
+style = 'bg:color_aqua'
+format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
+
+[git_status]
+style = 'bg:color_aqua'
+format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
+ahead = ' ⇡${count}'
+behind = ' ⇣${count}'
+diverged = ' ⇡${ahead_count} ⇣${behind_count}'
+modified = ' !${count}'
+staged = ' +${count}'
+untracked = ' ?${count}'
+deleted = ' ✕${count}'
+conflicted = ' =${count}'
+stashed = ' *${count}'
+
+# --- LANGUAGES (contextual, share blue segment) ---
+
+[python]
+symbol = ''
+style = 'bg:color_blue'
+format = '[[ $symbol $version ](fg:color_fg0 bg:color_blue)]($style)'
+
+[rust]
+symbol = ''
+style = 'bg:color_blue'
+format = '[[ $symbol $version ](fg:color_fg0 bg:color_blue)]($style)'
+
+[nodejs]
+symbol = ''
+style = 'bg:color_blue'
+format = '[[ $symbol $version ](fg:color_fg0 bg:color_blue)]($style)'
+
+# --- DOCKER + BIOINFO (contextual, share bg3 segment) ---
+
+[docker_context]
+symbol = ''
+style = 'bg:color_bg3'
+format = '[[ $symbol $context ](fg:#83a598 bg:color_bg3)]($style)'
+
+[custom.nextflow]
+command = 'echo nextflow'
+when = 'test -f nextflow.config || test -f main.nf'
+style = 'bg:color_bg3'
+format = '[[ $output ](fg:color_fg0 bg:color_bg3)]($style)'
+
+[custom.snakemake]
+command = 'echo snakemake'
+when = 'test -f Snakefile || test -f workflow/Snakefile'
+style = 'bg:color_bg3'
+format = '[[ $output ](fg:color_fg0 bg:color_bg3)]($style)'
+
+# --- DURATION + STATUS (rightmost, dark segment) ---
+
+[cmd_duration]
+min_time = 0
+show_milliseconds = true
+style = 'bg:color_bg3'
+format = '[ $duration ](fg:color_fg0 bg:color_bg3)'
+
+
+[status]
+disabled = false
+style = 'bg:color_bg3'
+symbol = '✘'
+success_symbol = '✔'
+format = '[ $symbol ](fg:color_green bg:color_bg3)'
+
+# --- USERNAME + HOSTNAME (rightmost segment) ---
+
+[username]
+show_always = true
+format = '[ $user](fg:color_purple bg:color_bg1)'
+
+[hostname]
+ssh_only = false
+format = '[@$hostname ](fg:color_purple bg:color_bg1)'
+
+# --- PROMPT CHARACTER (line 2) ---
+
+[line_break]
+disabled = true
+
+[character]
+disabled = true
+success_symbol = '[❯](bold fg:color_green)'
+error_symbol = '[❯](bold fg:color_red)'

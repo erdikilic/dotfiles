@@ -6,7 +6,40 @@ Personal dev environment — shell, editor, AI tools.
 
 ## Shell
 
-### Zsh + Oh My Zsh + Powerlevel10k
+### Fish + Starship (primary)
+
+- **Prompt:** [Starship](https://starship.rs/) — Gruvbox Dark powerline, single-line with left/right sections
+- **Font:** [FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
+- **Plugin manager:** [Fisher](https://github.com/jorgebucaran/fisher)
+- **Plugins:** [z](https://github.com/jethrokuan/z) (dir jumping), [fzf.fish](https://github.com/PatrickF1/fzf.fish) (fuzzy finder), [done](https://github.com/franciscolourenco/done) (notifications), [bass](https://github.com/edc/bass) (bash compat)
+- **Package managers:** conda/mamba (miniforge3), nvm, pixi, bun
+
+<details>
+<summary>Starship prompt segments</summary>
+
+**Left:** conda env (badge) → directory → git branch → git status
+
+**Right:** contextual tools (python, rust, node, docker, nextflow, snakemake) → duration → status
+
+Custom bioinformatics modules detect `nextflow.config` (🧬) and `Snakefile` (🐍).
+
+</details>
+
+Install:
+```bash
+# Starship
+ln -sf $(pwd)/starship.toml ~/.config/starship.toml
+
+# Fish shell
+rm -rf ~/.config/fish
+ln -sf $(pwd)/fish ~/.config/fish
+
+# Fisher + plugins
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+fisher install jethrokuan/z PatrickF1/fzf.fish franciscolourenco/done edc/bass
+```
+
+### Zsh + Oh My Zsh + Powerlevel10k (fallback)
 
 - **Theme:** [Powerlevel10k](https://github.com/romkatv/powerlevel10k) — rainbow style, nerdfont, 1-line, compact
 - **Font:** [FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
@@ -377,5 +410,5 @@ Plugins that run automatically on specific events.
 
 ## TODO
 
-- [ ] Add [Starship](https://starship.rs/) config
-- [ ] Add [Oh My Posh](https://ohmyposh.dev/) theme
+- [x] Add [Starship](https://starship.rs/) config
+- [ ] ~~Add [Oh My Posh](https://ohmyposh.dev/) theme~~ — replaced by Starship

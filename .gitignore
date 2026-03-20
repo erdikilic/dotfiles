@@ -9,5 +9,6 @@
 .DS_Store
 Thumbs.db
 
-# Superpowers brainstorming sessions
+# Superpowers
 .superpowers/
+docs/superpowers/

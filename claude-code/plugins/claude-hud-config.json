@@ -1,0 +1,32 @@
+{
+  "lineLayout": "expanded",
+  "showSeparators": false,
+  "pathLevels": 2,
+  "display": {
+    "showModel": true,
+    "showContextBar": true,
+    "showTools": true,
+    "showAgents": true,
+    "showTodos": true,
+    "showProject": true,
+    "showConfigCounts": true,
+    "showTokenBreakdown": true,
+    "showSpeed": false,
+    "showUsage": true,
+    "showDuration": true,
+    "showSessionName": true
+  },
+  "gitStatus": {
+    "enabled": true,
+    "showDirty": true,
+    "showAheadBehind": true,
+    "showFileStats": false
+  },
+  "colors": {
+    "context": "#D4843E",
+    "usage": "#C084FC",
+    "warning": "#FBBF24",
+    "usageWarning": "#F472B6",
+    "critical": "#EF4444"
+  }
+}

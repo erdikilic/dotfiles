@@ -13,8 +13,8 @@
     "showTokenBreakdown": true,
     "showSpeed": false,
     "showUsage": true,
-    "showDuration": true,
-    "showSessionName": true
+    "showDuration": false,
+    "showSessionName": false
   },
   "gitStatus": {
     "enabled": true,

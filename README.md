@@ -218,7 +218,7 @@ See [claude-code/README.md](claude-code/README.md) for full details.
 </details>
 
 <details>
-<summary>Skills / Slash Commands (91)</summary>
+<summary>Skills / Slash Commands (94)</summary>
 
 **superpowers**
 
@@ -257,6 +257,8 @@ See [claude-code/README.md](claude-code/README.md) for full details.
 | `/claude-mem:do` | Execute phased plans using subagents |
 | `/claude-mem:smart-explore` | Token-optimized code exploration via AST parsing |
 | `/claude-mem:timeline-report` | Generate project development history/timeline reports |
+| `/claude-mem:version-bump` | Automated semantic versioning and release workflow for plugins |
+| `/claude-mem:knowledge-agent` | Build and query AI-powered knowledge bases from observations |
 
 **commit-commands**
 
@@ -360,6 +362,7 @@ See [claude-code/README.md](claude-code/README.md) for full details.
 | `/claude-api` | Help building apps with Claude API/Anthropic SDK |
 | `/keybindings-help` | Customize Claude Code keyboard shortcuts |
 | `/update-config` | Configure Claude Code settings.json (hooks, permissions, env vars) |
+| `/schedule` | Create, update, list, or run scheduled remote agents on a cron schedule |
 
 </details>
 

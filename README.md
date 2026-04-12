@@ -181,7 +181,7 @@ Symlink: `ln -sf $(pwd)/condarc ~/.condarc`
 
 ---
 
-## Claude Code (24 Plugins + 5 MCPs)
+## Claude Code (73 Built-in + 24 Plugins + 5 MCPs)
 
 See [claude-code/README.md](claude-code/README.md) for full details.
 
@@ -214,6 +214,89 @@ See [claude-code/README.md](claude-code/README.md) for full details.
 | `playground` | Interactive single-file HTML playgrounds |
 | `skill-creator` | Create, test, and evaluate custom skills |
 | `claude-hud` | Status line HUD — model, cost, tokens, project info |
+
+</details>
+
+<details>
+<summary>Built-in Commands (73)</summary>
+
+Commands built into the Claude Code CLI. Source: [commands reference](https://code.claude.com/docs/en/commands).
+
+| Command | Description |
+|---------|-------------|
+| `/add-dir <path>` | Add a working directory for file access |
+| `/agents` | Manage agent configurations |
+| `/autofix-pr [prompt]` | Spawn web session to auto-fix PR CI/review issues |
+| `/batch <instruction>` | **Skill.** Orchestrate large-scale parallel changes across a codebase |
+| `/branch [name]` | Branch the conversation (aliases: `/fork`) |
+| `/btw <question>` | Quick side question without adding to conversation |
+| `/chrome` | Configure Claude in Chrome settings |
+| `/claude-api` | **Skill.** Load Claude API reference material and Managed Agents reference |
+| `/clear` | Clear conversation history (aliases: `/reset`, `/new`) |
+| `/color [color]` | Set prompt bar color for session |
+| `/compact [instructions]` | Compact conversation with optional focus |
+| `/config` | Open Settings interface (alias: `/settings`) |
+| `/context` | Visualize context usage as a colored grid |
+| `/copy [N]` | Copy last assistant response to clipboard |
+| `/cost` | Show token usage statistics |
+| `/debug [description]` | **Skill.** Enable debug logging and troubleshoot issues |
+| `/desktop` | Continue session in Desktop app (alias: `/app`) |
+| `/diff` | Interactive diff viewer for uncommitted and per-turn changes |
+| `/doctor` | Diagnose and verify installation and settings |
+| `/effort [level]` | Set model effort level (low, medium, high, max, auto) |
+| `/exit` | Exit the CLI (alias: `/quit`) |
+| `/export [filename]` | Export conversation as plain text |
+| `/extra-usage` | Configure extra usage for rate limits |
+| `/fast [on\|off]` | Toggle fast mode |
+| `/feedback [report]` | Submit feedback (alias: `/bug`) |
+| `/help` | Show help and available commands |
+| `/hooks` | View hook configurations for tool events |
+| `/ide` | Manage IDE integrations and show status |
+| `/init` | Initialize project with CLAUDE.md guide |
+| `/insights` | Generate session analysis report (patterns, friction) |
+| `/install-github-app` | Set up Claude GitHub Actions app |
+| `/install-slack-app` | Install Claude Slack app |
+| `/keybindings` | Open or create keybindings configuration file |
+| `/login` | Sign in to Anthropic account |
+| `/logout` | Sign out from Anthropic account |
+| `/loop [interval] [prompt]` | **Skill.** Run a prompt repeatedly on an interval |
+| `/mcp` | Manage MCP server connections and OAuth |
+| `/memory` | Edit CLAUDE.md memory files, toggle auto-memory |
+| `/mobile` | QR code for mobile app (aliases: `/ios`, `/android`) |
+| `/model [model]` | Select or change AI model |
+| `/passes` | Share a free week of Claude Code |
+| `/permissions` | Manage tool permission rules (alias: `/allowed-tools`) |
+| `/plan [description]` | Enter plan mode |
+| `/plugin` | Manage plugins |
+| `/powerup` | Interactive feature lessons with animated demos |
+| `/privacy-settings` | View and update privacy settings |
+| `/release-notes` | View changelog in interactive version picker |
+| `/reload-plugins` | Reload active plugins without restarting |
+| `/remote-control` | Make session available for remote control (alias: `/rc`) |
+| `/remote-env` | Configure default remote environment |
+| `/rename [name]` | Rename current session |
+| `/resume [session]` | Resume conversation by ID or name (alias: `/continue`) |
+| `/rewind` | Rewind conversation and/or code (alias: `/checkpoint`) |
+| `/sandbox` | Toggle sandbox mode |
+| `/schedule [description]` | **Skill.** Create, update, list, or run scheduled tasks |
+| `/security-review` | Analyze pending changes for security vulnerabilities |
+| `/setup-bedrock` | Configure Amazon Bedrock (interactive wizard) |
+| `/setup-vertex` | Configure Google Vertex AI (interactive wizard) |
+| `/simplify [focus]` | **Skill.** Review changed code for quality, then fix issues |
+| `/skills` | List available skills |
+| `/stats` | Visualize daily usage, streaks, model preferences |
+| `/status` | Settings status tab (version, model, account) |
+| `/statusline` | Configure Claude Code's status line |
+| `/stickers` | Order Claude Code stickers |
+| `/tasks` | List and manage background tasks (alias: `/bashes`) |
+| `/teleport` | Pull web session into terminal (alias: `/tp`) |
+| `/terminal-setup` | Configure terminal keybindings (Shift+Enter, etc.) |
+| `/theme` | Change color theme (light, dark, colorblind, ANSI) |
+| `/ultraplan <prompt>` | Draft plan in ultraplan session, review in browser |
+| `/upgrade` | Open upgrade page |
+| `/usage` | Show plan usage limits and rate limit status |
+| `/voice` | Toggle push-to-talk voice dictation |
+| `/web-setup` | Connect GitHub to Claude Code on the web |
 
 </details>
 

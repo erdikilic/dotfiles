@@ -1,4 +1,6 @@
-# Claude Code (24 Plugins + 5 MCPs)
+# Claude Code (73 Built-in + 24 Plugins + 5 MCPs)
+
+Claude Code v2.1.104 includes 73 built-in commands ([reference](https://code.claude.com/docs/en/commands)) plus the plugins and MCPs below.
 
 ### Git & GitHub
 

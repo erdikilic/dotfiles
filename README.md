@@ -181,7 +181,7 @@ Symlink: `ln -sf $(pwd)/condarc ~/.condarc`
 
 ---
 
-## Claude Code (73 Built-in + 24 Plugins + 5 MCPs)
+## Claude Code (73 Built-in + 28 Plugins + 5 MCPs)
 
 See [claude-code/README.md](claude-code/README.md) for full details.
 
@@ -301,7 +301,7 @@ Commands built into the Claude Code CLI. Source: [commands reference](https://co
 </details>
 
 <details>
-<summary>Skills / Slash Commands (94)</summary>
+<summary>Skills / Slash Commands (167)</summary>
 
 **superpowers**
 
@@ -431,10 +431,22 @@ Commands built into the Claude Code CLI. Source: [commands reference](https://co
 | pr-review-toolkit | `/pr-review-toolkit:review-pr` | Comprehensive PR review using specialized agents |
 | feature-dev | `/feature-dev:feature-dev` | Guided feature development with architecture focus |
 | frontend-design | `/frontend-design:frontend-design` | Create production-grade frontend interfaces |
-| ui-ux-pro-max | `/ui-ux-pro-max:ui-ux-pro-max` | UI/UX design: 50 styles, 21 palettes, 50 font pairings, multiple frameworks |
+| ui-ux-pro-max | `/ui-ux-pro-max:ui-ux-pro-max` | UI/UX design: 50+ styles, 161 palettes, 57 font pairings, multiple frameworks |
 | playground | `/playground:playground` | Create interactive single-file HTML playgrounds |
 | skill-creator | `/skill-creator:skill-creator` | Create, modify, benchmark, and optimize skills |
 | claude-code-setup | `/claude-code-setup:claude-automation-recommender` | Analyze codebase & recommend Claude Code automations |
+| andrej-karpathy-skills | `/andrej-karpathy-skills:karpathy-guidelines` | Reduce LLM mistakes — surgical changes, surface assumptions, verifiable criteria |
+
+**ui-ux-pro-max** (additional skills)
+
+| Command | Description |
+|---------|-------------|
+| `/ui-ux-pro-max:banner-design` | Design banners for social media, ads, website heroes, print (22 styles) |
+| `/ui-ux-pro-max:brand` | Brand voice, visual identity, messaging frameworks, asset management |
+| `/ui-ux-pro-max:design` | Comprehensive design: logos (55 styles), CIP (50 deliverables), icons, social photos |
+| `/ui-ux-pro-max:design-system` | Token architecture, component specs, three-layer design tokens |
+| `/ui-ux-pro-max:slides` | Strategic HTML presentations with Chart.js, design tokens, responsive layouts |
+| `/ui-ux-pro-max:ui-styling` | UI styling with shadcn/ui, Radix UI, Tailwind, canvas-based visual designs |
 
 **Standalone**
 
@@ -446,6 +458,87 @@ Commands built into the Claude Code CLI. Source: [commands reference](https://co
 | `/keybindings-help` | Customize Claude Code keyboard shortcuts |
 | `/update-config` | Configure Claude Code settings.json (hooks, permissions, env vars) |
 | `/schedule` | Create, update, list, or run scheduled remote agents on a cron schedule |
+
+**document-skills**
+
+| Command | Description |
+|---------|-------------|
+| `/document-skills:pdf` | Read, merge, split, rotate, watermark, encrypt, OCR PDF files |
+| `/document-skills:xlsx` | Open, read, edit, create, convert spreadsheet files |
+| `/document-skills:docx` | Create, read, edit, manipulate Word documents |
+| `/document-skills:pptx` | Create, read, edit, combine slide decks and presentations |
+| `/document-skills:frontend-design` | Create production-grade frontend interfaces with high design quality |
+| `/document-skills:canvas-design` | Create visual art in PNG/PDF using design philosophy |
+| `/document-skills:claude-api` | Build, debug, optimize Claude API / Anthropic SDK apps |
+| `/document-skills:algorithmic-art` | Create generative art using p5.js with seeded randomness |
+| `/document-skills:webapp-testing` | Test local web apps using Playwright — screenshots, logs, UI verification |
+| `/document-skills:brand-guidelines` | Apply Anthropic brand colors and typography to artifacts |
+| `/document-skills:internal-comms` | Write internal communications (status reports, updates, FAQs, incident reports) |
+| `/document-skills:mcp-builder` | Guide for building MCP servers (Python FastMCP or Node/TS SDK) |
+| `/document-skills:theme-factory` | Apply or generate themes for slides, docs, reports, landing pages |
+| `/document-skills:web-artifacts-builder` | Create multi-component web artifacts with React, Tailwind, shadcn/ui |
+| `/document-skills:slack-gif-creator` | Create animated GIFs optimized for Slack |
+| `/document-skills:doc-coauthoring` | Structured workflow for co-authoring documentation and specs |
+| `/document-skills:skill-creator` | Create, modify, evaluate, and benchmark custom skills |
+
+**codex**
+
+| Command | Description |
+|---------|-------------|
+| `/codex:review` | Run a Codex code review against local git state |
+| `/codex:adversarial-review` | Run a Codex review that challenges implementation approach and design choices |
+| `/codex:rescue` | Delegate investigation or fix requests to Codex rescue subagent |
+| `/codex:setup` | Check Codex CLI readiness and toggle stop-time review gate |
+| `/codex:status` | Show active and recent Codex jobs, including review-gate status |
+| `/codex:result` | Show stored final output for a finished Codex job |
+| `/codex:cancel` | Cancel an active background Codex job |
+
+**compound-engineering**
+
+| Command | Description |
+|---------|-------------|
+| `/compound-engineering:ce-brainstorm` | Explore requirements and approaches through collaborative dialogue |
+| `/compound-engineering:ce-plan` | Create structured plans for multi-step tasks with interactive review |
+| `/compound-engineering:ce-work` | Execute work efficiently while maintaining quality |
+| `/compound-engineering:ce-debug` | Systematic root-cause debugging for errors and test failures |
+| `/compound-engineering:ce-review` | Structured code review with tiered persona agents |
+| `/compound-engineering:ce-optimize` | Metric-driven iterative optimization loops (Karpathy autoresearch-inspired) |
+| `/compound-engineering:ce-compound` | Document a solved problem to compound team knowledge |
+| `/compound-engineering:ce-ideate` | Generate and evaluate grounded improvement ideas for a project |
+| `/compound-engineering:ce-sessions` | Search and query coding agent session history |
+| `/compound-engineering:ce-slack-research` | Search Slack for organizational context and decisions |
+| `/compound-engineering:ce-demo-reel` | Capture visual demo reels (GIF, screenshots) for PR descriptions |
+| `/compound-engineering:ce-pr-description` | Write or regenerate value-first PR descriptions |
+| `/compound-engineering:git-commit` | Create a git commit with clear, value-communicating message |
+| `/compound-engineering:git-commit-push-pr` | Commit, push, and open a PR with adaptive description |
+| `/compound-engineering:git-worktree` | Manage git worktrees for isolated parallel development |
+| `/compound-engineering:git-clean-gone-branches` | Clean up local branches whose remote tracking is gone |
+| `/compound-engineering:onboarding` | Generate ONBOARDING.md for new contributors |
+| `/compound-engineering:document-review` | Review requirements/plan docs using parallel persona agents |
+| `/compound-engineering:todo-resolve` | Batch-resolve approved todos after code review or triage |
+| `/compound-engineering:test-browser` | Run browser tests on pages affected by current PR/branch |
+| `/compound-engineering:proof` | Create, edit, comment on markdown docs via Proof's web API |
+| `/compound-engineering:claude-permissions-optimizer` | Optimize Claude Code permissions from session history |
+| `/compound-engineering:frontend-design` | Build web interfaces with genuine design quality |
+| `/compound-engineering:agent-native-architecture` | Build apps where agents are first-class citizens |
+| `/compound-engineering:gemini-imagegen` | Generate and edit images using Gemini API |
+| `/compound-engineering:andrew-kane-gem-writer` | Write Ruby gems following Andrew Kane's patterns |
+| `/compound-engineering:dhh-rails-style` | Write Ruby/Rails code in DHH's 37signals style |
+| `/compound-engineering:dspy-ruby` | Build type-safe LLM apps with DSPy.rb |
+| `/compound-engineering:every-style-editor` | Review/edit copy for Every's style guide compliance |
+| `/compound-engineering:lfg` | Full autonomous engineering workflow |
+| `/compound-engineering:ce-work-beta` | Execute work with experimental Codex delegation mode |
+| `/compound-engineering:ce-compound-refresh` | Refresh stale learnings and pattern docs against current codebase |
+| `/compound-engineering:changelog` | Create engaging changelogs for recent merges to main |
+| `/compound-engineering:resolve-pr-feedback` | Resolve PR review feedback by evaluating and fixing issues in parallel |
+| `/compound-engineering:agent-native-audit` | Run comprehensive agent-native architecture review with scored principles |
+| `/compound-engineering:todo-create` | Create durable work items in the file-based todo system |
+| `/compound-engineering:todo-triage` | Review pending todos for approval and prioritize findings |
+| `/compound-engineering:test-xcode` | Build and test iOS apps on simulator using XcodeBuildMCP |
+| `/compound-engineering:deploy-docs` | Validate and prepare documentation for GitHub Pages deployment |
+| `/compound-engineering:ce-setup` | Diagnose and configure compound-engineering environment |
+| `/compound-engineering:ce-update` | Check if plugin is up to date and fix stale cache |
+| `/compound-engineering:report-bug-ce` | Report a bug in the compound-engineering plugin |
 
 </details>
 

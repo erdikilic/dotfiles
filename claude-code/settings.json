@@ -31,7 +31,11 @@
     "claude-code-setup@claude-plugins-official": true,
     "double-shot-latte@superpowers-marketplace": false,
     "taskmaster@taskmaster": true,
-    "claude-hud@claude-hud": true
+    "claude-hud@claude-hud": true,
+    "andrej-karpathy-skills@karpathy-skills": true,
+    "document-skills@anthropic-agent-skills": true,
+    "codex@openai-codex": true,
+    "compound-engineering@compound-engineering-plugin": true
   },
   "extraKnownMarketplaces": {
     "ui-ux-pro-max-skill": {
@@ -47,6 +51,31 @@
         "repo": "jarrodwatts/claude-hud"
       },
       "autoUpdate": true
+    },
+    "karpathy-skills": {
+      "source": {
+        "source": "github",
+        "repo": "forrestchang/andrej-karpathy-skills"
+      },
+      "autoUpdate": true
+    },
+    "anthropic-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/skills"
+      }
+    },
+    "openai-codex": {
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
+      }
+    },
+    "compound-engineering-plugin": {
+      "source": {
+        "source": "github",
+        "repo": "EveryInc/compound-engineering-plugin"
+      }
     }
   },
   "skipDangerousModePermissionPrompt": true

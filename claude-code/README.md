@@ -29,6 +29,7 @@ Claude Code v2.1.104 includes 73 built-in commands ([reference](https://code.cla
 | claude-code-setup | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup) | Analyze codebases & recommend tailored hooks, skills, MCPs |
 | taskmaster | [taskmaster](https://github.com/eyaltoledano/claude-task-master) | Task orchestration & dependency management |
 | andrej-karpathy-skills | [karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) | Karpathy's coding guidelines — reduce LLM mistakes, surgical changes, verifiable criteria (`/karpathy-guidelines`) |
+| compound-engineering | [compound-engineering-plugin](https://github.com/EveryInc/compound-engineering-plugin) | Dev workflow suite — brainstorm, plan, debug, review, PR descriptions, optimization loops |
 | double-shot-latte | [superpowers-marketplace](https://github.com/obra/superpowers-marketplace) | Auto-continue without "Would you like me to continue?" prompts (disabled) |
 
 ### Memory & Context
@@ -63,7 +64,6 @@ Claude Code v2.1.104 includes 73 built-in commands ([reference](https://code.cla
 | claude-hud | [claude-hud](https://github.com/jarrodwatts/claude-hud) | Status line HUD — model, cost, tokens, project info |
 | document-skills | [anthropic-agent-skills](https://github.com/anthropics/skills) | Document suite — PDF, XLSX, DOCX, PPTX, canvas art, MCP builder, frontend design |
 | codex | [openai-codex](https://github.com/openai/codex-plugin-cc) | Delegate tasks & code review to OpenAI Codex from Claude Code |
-| compound-engineering | [compound-engineering-plugin](https://github.com/EveryInc/compound-engineering-plugin) | Dev workflow suite — brainstorm, plan, debug, review, PR descriptions, optimization loops |
 
 ### Standalone MCP Servers
 

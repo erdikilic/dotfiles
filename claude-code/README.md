@@ -1,4 +1,4 @@
-# Claude Code (73 Built-in + 24 Plugins + 5 MCPs)
+# Claude Code (73 Built-in + 28 Plugins + 5 MCPs)
 
 Claude Code v2.1.104 includes 73 built-in commands ([reference](https://code.claude.com/docs/en/commands)) plus the plugins and MCPs below.
 
@@ -28,6 +28,7 @@ Claude Code v2.1.104 includes 73 built-in commands ([reference](https://code.cla
 | code-simplifier | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier) | Post-edit code cleanup & refactoring |
 | claude-code-setup | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup) | Analyze codebases & recommend tailored hooks, skills, MCPs |
 | taskmaster | [taskmaster](https://github.com/eyaltoledano/claude-task-master) | Task orchestration & dependency management |
+| andrej-karpathy-skills | [karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) | Karpathy's coding guidelines — reduce LLM mistakes, surgical changes, verifiable criteria (`/karpathy-guidelines`) |
 | double-shot-latte | [superpowers-marketplace](https://github.com/obra/superpowers-marketplace) | Auto-continue without "Would you like me to continue?" prompts (disabled) |
 
 ### Memory & Context
@@ -60,6 +61,9 @@ Claude Code v2.1.104 includes 73 built-in commands ([reference](https://code.cla
 | playground | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/playground) | Interactive single-file HTML playgrounds |
 | skill-creator | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator) | Create, test, and evaluate custom skills |
 | claude-hud | [claude-hud](https://github.com/jarrodwatts/claude-hud) | Status line HUD — model, cost, tokens, project info |
+| document-skills | [anthropic-agent-skills](https://github.com/anthropics/skills) | Document suite — PDF, XLSX, DOCX, PPTX, canvas art, MCP builder, frontend design |
+| codex | [openai-codex](https://github.com/openai/codex-plugin-cc) | Delegate tasks & code review to OpenAI Codex from Claude Code |
+| compound-engineering | [compound-engineering-plugin](https://github.com/EveryInc/compound-engineering-plugin) | Dev workflow suite — brainstorm, plan, debug, review, PR descriptions, optimization loops |
 
 ### Standalone MCP Servers
 
@@ -82,6 +86,10 @@ claude plugin marketplace add eyaltoledano/claude-task-master
 claude plugin marketplace add thedotmack/claude-mem
 claude plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill
 claude plugin marketplace add jarrodwatts/claude-hud
+claude plugin marketplace add forrestchang/andrej-karpathy-skills
+claude plugin marketplace add anthropics/skills
+claude plugin marketplace add openai/codex-plugin-cc
+claude plugin marketplace add EveryInc/compound-engineering-plugin
 
 # 2. Install plugins — official marketplace
 claude plugin install github@claude-plugins-official
@@ -109,6 +117,10 @@ claude plugin install taskmaster@taskmaster
 claude plugin install claude-mem@thedotmack
 claude plugin install ui-ux-pro-max@ui-ux-pro-max-skill
 claude plugin install claude-hud@claude-hud
+claude plugin install andrej-karpathy-skills@karpathy-skills
+claude plugin install document-skills@anthropic-agent-skills
+claude plugin install codex@openai-codex
+claude plugin install compound-engineering@compound-engineering-plugin
 
 # 3. Add standalone MCP servers (user scope)
 claude mcp add --scope user task-master-ai -- npx -y task-master-ai@latest

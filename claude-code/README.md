@@ -1,13 +1,15 @@
-# Claude Code (73 Built-in + 28 Plugins + 5 MCPs)
+# Claude Code (73 Built-in + 29 Plugins + 5 MCPs)
 
 Claude Code v2.1.104 includes 73 built-in commands ([reference](https://code.claude.com/docs/en/commands)) plus the plugins and MCPs below.
+
+Plugins marked _(disabled)_ are installed but inactive — toggle via `/plugin`.
 
 ### Git & GitHub
 
 | Plugin | Source | Description |
 |--------|--------|-------------|
 | github | [github](https://github.com/github/github-mcp-server) | GitHub MCP — issues, PRs, branches, releases |
-| commit-commands | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/commit-commands) | Quick commit, push, PR workflows |
+| commit-commands | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/commit-commands) | Quick commit, push, PR workflows _(disabled)_ |
 | code-review | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review) | PR code review |
 | pr-review-toolkit | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pr-review-toolkit) | Deep PR review — comments, tests, error handling, types, quality |
 
@@ -27,10 +29,10 @@ Claude Code v2.1.104 includes 73 built-in commands ([reference](https://code.cla
 | feature-dev | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev) | Guided feature development with codebase analysis |
 | code-simplifier | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier) | Post-edit code cleanup & refactoring |
 | claude-code-setup | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup) | Analyze codebases & recommend tailored hooks, skills, MCPs |
-| taskmaster | [taskmaster](https://github.com/eyaltoledano/claude-task-master) | Task orchestration & dependency management |
+| taskmaster | [taskmaster](https://github.com/eyaltoledano/claude-task-master) | Task orchestration & dependency management _(disabled)_ |
 | andrej-karpathy-skills | [karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) | Karpathy's coding guidelines — reduce LLM mistakes, surgical changes, verifiable criteria (`/karpathy-guidelines`) |
-| compound-engineering | [compound-engineering-plugin](https://github.com/EveryInc/compound-engineering-plugin) | Dev workflow suite — brainstorm, plan, debug, review, PR descriptions, optimization loops |
-| double-shot-latte | [superpowers-marketplace](https://github.com/obra/superpowers-marketplace) | Auto-continue without "Would you like me to continue?" prompts (disabled) |
+| compound-engineering | [compound-engineering-plugin](https://github.com/EveryInc/compound-engineering-plugin) | Dev workflow suite — brainstorm, plan, debug, review, PR descriptions, optimization loops _(disabled)_ |
+| double-shot-latte | [superpowers-marketplace](https://github.com/obra/superpowers-marketplace) | Auto-continue without "Would you like me to continue?" prompts _(disabled)_ |
 
 ### Memory & Context
 
@@ -64,6 +66,7 @@ Claude Code v2.1.104 includes 73 built-in commands ([reference](https://code.cla
 | claude-hud | [claude-hud](https://github.com/jarrodwatts/claude-hud) | Status line HUD — model, cost, tokens, project info |
 | document-skills | [anthropic-agent-skills](https://github.com/anthropics/skills) | Document suite — PDF, XLSX, DOCX, PPTX, canvas art, MCP builder, frontend design |
 | codex | [openai-codex](https://github.com/openai/codex-plugin-cc) | Delegate tasks & code review to OpenAI Codex from Claude Code |
+| academic-research-skills | [Imbad0202](https://github.com/Imbad0202/academic-research-skills) | Academic research & paper pipeline — deep research, writing, peer review, revision (`/ars-full`, `/ars-plan`) |
 
 ### Standalone MCP Servers
 
@@ -71,7 +74,7 @@ Configured via `claude mcp add --scope user`, not as plugins.
 
 | Server | Command | Source | Description |
 |--------|---------|--------|-------------|
-| task-master-ai | `npx -y task-master-ai@latest` | [eyaltoledano/claude-task-master](https://github.com/eyaltoledano/claude-task-master) | Task orchestration & dependency management |
+| chrome_devtools | `npx chrome-devtools-mcp@latest` | [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) | Drive Chrome — console, network, performance traces, screenshots |
 | playwright | `npx @playwright/mcp@latest` | [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | Official Playwright browser automation & E2E testing |
 | svelte | `npx -y @sveltejs/mcp` | [sveltejs/mcp](https://github.com/sveltejs/mcp) | Official Svelte docs, examples, autofixer |
 | shadcn | `npx shadcn@latest mcp` | [shadcn-ui/ui](https://github.com/shadcn-ui/ui) | shadcn/ui component search, examples, audit |
@@ -90,6 +93,7 @@ claude plugin marketplace add forrestchang/andrej-karpathy-skills
 claude plugin marketplace add anthropics/skills
 claude plugin marketplace add openai/codex-plugin-cc
 claude plugin marketplace add EveryInc/compound-engineering-plugin
+claude plugin marketplace add Imbad0202/academic-research-skills
 
 # 2. Install plugins — official marketplace
 claude plugin install github@claude-plugins-official
@@ -121,9 +125,10 @@ claude plugin install andrej-karpathy-skills@karpathy-skills
 claude plugin install document-skills@anthropic-agent-skills
 claude plugin install codex@openai-codex
 claude plugin install compound-engineering@compound-engineering-plugin
+claude plugin install academic-research-skills@academic-research-skills
 
 # 3. Add standalone MCP servers (user scope)
-claude mcp add --scope user task-master-ai -- npx -y task-master-ai@latest
+claude mcp add --scope user chrome_devtools -- npx chrome-devtools-mcp@latest
 claude mcp add --scope user playwright -- npx @playwright/mcp@latest
 claude mcp add --scope user svelte -- npx -y @sveltejs/mcp
 claude mcp add --scope user shadcn -- npx shadcn@latest mcp

@@ -2,14 +2,20 @@
   "env": {
     "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1"
   },
+  "permissions": {
+    "defaultMode": "auto"
+  },
   "effortLevel": "high",
+  "theme": "dark",
+  "skipDangerousModePermissionPrompt": true,
+  "skipAutoPermissionPrompt": true,
   "statusLine": {
     "type": "command",
     "command": "bash -c 'plugin_dir=$(ls -d \"${CLAUDE_CONFIG_DIR:-$HOME/.claude}\"/plugins/cache/claude-hud/claude-hud/*/ 2>/dev/null | awk -F/ '\"'\"'{ print $(NF-1) \"\\t\" $0 }'\"'\"' | sort -t. -k1,1n -k2,2n -k3,3n -k4,4n | tail -1 | cut -f2-); exec \"/home/fox/.bun/bin/bun\" \"${plugin_dir}src/index.ts\"'"
   },
   "enabledPlugins": {
     "github@claude-plugins-official": true,
-    "commit-commands@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": false,
     "rust-analyzer-lsp@claude-plugins-official": true,
     "claude-mem@thedotmack": true,
     "claude-md-management@claude-plugins-official": true,
@@ -30,12 +36,13 @@
     "skill-creator@claude-plugins-official": true,
     "claude-code-setup@claude-plugins-official": true,
     "double-shot-latte@superpowers-marketplace": false,
-    "taskmaster@taskmaster": true,
+    "taskmaster@taskmaster": false,
     "claude-hud@claude-hud": true,
     "andrej-karpathy-skills@karpathy-skills": true,
     "document-skills@anthropic-agent-skills": true,
     "codex@openai-codex": true,
-    "compound-engineering@compound-engineering-plugin": true
+    "compound-engineering@compound-engineering-plugin": false,
+    "academic-research-skills@academic-research-skills": true
   },
   "extraKnownMarketplaces": {
     "ui-ux-pro-max-skill": {
@@ -75,8 +82,15 @@
       "source": {
         "source": "github",
         "repo": "EveryInc/compound-engineering-plugin"
-      }
+      },
+      "autoUpdate": true
+    },
+    "academic-research-skills": {
+      "source": {
+        "source": "github",
+        "repo": "Imbad0202/academic-research-skills"
+      },
+      "autoUpdate": true
     }
-  },
-  "skipDangerousModePermissionPrompt": true
+  }
 }

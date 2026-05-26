@@ -1,6 +1,6 @@
-# Claude Code (73 Built-in + 29 Plugins + 5 MCPs)
+# Claude Code (89 Built-in + 30 Plugins + 5 MCPs)
 
-Claude Code v2.1.104 includes 73 built-in commands ([reference](https://code.claude.com/docs/en/commands)) plus the plugins and MCPs below.
+Claude Code v2.1.150 includes 89 built-in commands ([reference](https://code.claude.com/docs/en/commands)) plus the plugins and MCPs below.
 
 Plugins marked _(disabled)_ are installed but inactive — toggle via `/plugin`.
 
@@ -9,7 +9,7 @@ Plugins marked _(disabled)_ are installed but inactive — toggle via `/plugin`.
 | Plugin | Source | Description |
 |--------|--------|-------------|
 | github | [github](https://github.com/github/github-mcp-server) | GitHub MCP — issues, PRs, branches, releases |
-| commit-commands | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/commit-commands) | Quick commit, push, PR workflows _(disabled)_ |
+| commit-commands | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/commit-commands) | Quick commit, push, PR workflows |
 | code-review | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review) | PR code review |
 | pr-review-toolkit | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pr-review-toolkit) | Deep PR review — comments, tests, error handling, types, quality |
 
@@ -41,6 +41,7 @@ Plugins marked _(disabled)_ are installed but inactive — toggle via `/plugin`.
 | episodic-memory | [superpowers-marketplace](https://github.com/obra/episodic-memory) | Auto-indexes conversations, semantic search across sessions |
 | claude-mem | [thedotmack](https://github.com/thedotmack/claude-mem) | Persistent memory DB, make-plan/do workflow, AST-based smart-explore |
 | context7 | [upstash](https://github.com/upstash/context7) | Live library documentation lookup |
+| remember | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/remember) | `/remember` — save session state for clean continuation next session |
 
 ### UI & Design
 
@@ -113,6 +114,7 @@ claude plugin install hookify@claude-plugins-official
 claude plugin install claude-md-management@claude-plugins-official
 claude plugin install playground@claude-plugins-official
 claude plugin install skill-creator@claude-plugins-official
+claude plugin install remember@claude-plugins-official
 # Install plugins — third-party marketplaces
 claude plugin install superpowers@superpowers-marketplace
 claude plugin install episodic-memory@superpowers-marketplace

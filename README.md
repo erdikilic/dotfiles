@@ -181,7 +181,7 @@ Symlink: `ln -sf $(pwd)/condarc ~/.condarc`
 
 ---
 
-## Claude Code (73 Built-in + 28 Plugins + 5 MCPs)
+## Claude Code (89 Built-in + 30 Plugins + 5 MCPs)
 
 See [claude-code/README.md](claude-code/README.md) for full details.
 
@@ -200,9 +200,11 @@ See [claude-code/README.md](claude-code/README.md) for full details.
 | `superpowers` | Core skills (debugging, TDD, planning, code review, parallel agents) |
 | `feature-dev` | Guided feature development with codebase analysis |
 | `code-simplifier` | Post-edit code cleanup & refactoring |
-| `taskmaster` | Task orchestration & dependency management |
+| `taskmaster` | Task orchestration & dependency management _(disabled)_ |
 | `claude-code-setup` | Analyze codebases & recommend tailored hooks, skills, MCPs |
-| `double-shot-latte` | Auto-continue without "Would you like me to continue?" prompts (disabled) |
+| `double-shot-latte` | Auto-continue without "Would you like me to continue?" prompts _(disabled)_ |
+| `compound-engineering` | Dev workflow suite (brainstorm, plan, debug, review, PR descriptions) _(disabled)_ |
+| `andrej-karpathy-skills` | Karpathy's coding guidelines — surgical changes, verifiable criteria |
 | `episodic-memory` | Auto-indexes conversations, semantic search across sessions |
 | `claude-mem` | Persistent memory DB, make-plan/do workflow, AST smart-explore |
 | `context7` | Live library documentation lookup |
@@ -214,25 +216,31 @@ See [claude-code/README.md](claude-code/README.md) for full details.
 | `playground` | Interactive single-file HTML playgrounds |
 | `skill-creator` | Create, test, and evaluate custom skills |
 | `claude-hud` | Status line HUD — model, cost, tokens, project info |
+| `document-skills` | Document suite — PDF, XLSX, DOCX, PPTX, canvas art, MCP builder |
+| `codex` | Delegate tasks & code review to OpenAI Codex |
+| `academic-research-skills` | Academic paper pipeline — deep research, writing, peer review, revision |
+| `remember` | `/remember` — save session state for clean continuation next session |
 
 </details>
 
 <details>
-<summary>Built-in Commands (73)</summary>
+<summary>Built-in Commands (89)</summary>
 
-Commands built into the Claude Code CLI. Source: [commands reference](https://code.claude.com/docs/en/commands).
+Commands built into the Claude Code CLI (v2.1.150). Source: [commands reference](https://code.claude.com/docs/en/commands).
 
 | Command | Description |
 |---------|-------------|
 | `/add-dir <path>` | Add a working directory for file access |
 | `/agents` | Manage agent configurations |
 | `/autofix-pr [prompt]` | Spawn web session to auto-fix PR CI/review issues |
+| `/background [prompt]` | Detach current session to run as a background agent (alias: `/bg`) |
 | `/batch <instruction>` | **Skill.** Orchestrate large-scale parallel changes across a codebase |
 | `/branch [name]` | Branch the conversation (aliases: `/fork`) |
 | `/btw <question>` | Quick side question without adding to conversation |
 | `/chrome` | Configure Claude in Chrome settings |
 | `/claude-api` | **Skill.** Load Claude API reference material and Managed Agents reference |
 | `/clear` | Clear conversation history (aliases: `/reset`, `/new`) |
+| `/code-review` | **Skill.** Review current diff for correctness bugs; read-only findings |
 | `/color [color]` | Set prompt bar color for session |
 | `/compact [instructions]` | Compact conversation with optional focus |
 | `/config` | Open Settings interface (alias: `/settings`) |
@@ -246,9 +254,12 @@ Commands built into the Claude Code CLI. Source: [commands reference](https://co
 | `/effort [level]` | Set model effort level (low, medium, high, max, auto) |
 | `/exit` | Exit the CLI (alias: `/quit`) |
 | `/export [filename]` | Export conversation as plain text |
-| `/extra-usage` | Configure extra usage for rate limits |
 | `/fast [on\|off]` | Toggle fast mode |
-| `/feedback [report]` | Submit feedback (alias: `/bug`) |
+| `/feedback [report]` | Submit feedback, report a bug, or share conversation (aliases: `/bug`, `/share`) |
+| `/fewer-permission-prompts` | **Skill.** Scan transcripts and add an allowlist to `.claude/settings.json` |
+| `/focus` | Toggle focus view — last prompt + tool-call summary + final response |
+| `/goal [condition]` | Set a goal Claude keeps working toward across turns |
+| `/heapdump` | Write a JavaScript heap snapshot + memory breakdown for diagnostics |
 | `/help` | Show help and available commands |
 | `/hooks` | View hook configurations for tool events |
 | `/ide` | Manage IDE integrations and show status |
@@ -270,15 +281,20 @@ Commands built into the Claude Code CLI. Source: [commands reference](https://co
 | `/plugin` | Manage plugins |
 | `/powerup` | Interactive feature lessons with animated demos |
 | `/privacy-settings` | View and update privacy settings |
+| `/radio` | Open Claude FM lo-fi radio in browser (prints stream URL if no browser) |
+| `/recap` | Generate a one-line summary of the current session |
 | `/release-notes` | View changelog in interactive version picker |
 | `/reload-plugins` | Reload active plugins without restarting |
 | `/remote-control` | Make session available for remote control (alias: `/rc`) |
 | `/remote-env` | Configure default remote environment |
 | `/rename [name]` | Rename current session |
 | `/resume [session]` | Resume conversation by ID or name (alias: `/continue`) |
-| `/rewind` | Rewind conversation and/or code (alias: `/checkpoint`) |
+| `/rewind` | Rewind conversation and/or code (aliases: `/checkpoint`, `/undo`) |
+| `/run` | **Skill.** Launch and drive your project's app to see a change working |
+| `/run-skill-generator` | **Skill.** Teach `/run` and `/verify` how to build your project's app |
 | `/sandbox` | Toggle sandbox mode |
-| `/schedule [description]` | **Skill.** Create, update, list, or run scheduled tasks |
+| `/schedule [description]` | **Skill.** Create, update, list, run scheduled tasks (aliases: `/routines`, `/proactive`) |
+| `/scroll-speed` | Adjust mouse wheel scroll speed interactively |
 | `/security-review` | Analyze pending changes for security vulnerabilities |
 | `/setup-bedrock` | Configure Amazon Bedrock (interactive wizard) |
 | `/setup-vertex` | Configure Google Vertex AI (interactive wizard) |
@@ -288,25 +304,32 @@ Commands built into the Claude Code CLI. Source: [commands reference](https://co
 | `/status` | Settings status tab (version, model, account) |
 | `/statusline` | Configure Claude Code's status line |
 | `/stickers` | Order Claude Code stickers |
+| `/stop` | Stop the current background session (only while attached) |
 | `/tasks` | List and manage background tasks (alias: `/bashes`) |
+| `/team-onboarding` | Generate a team onboarding guide from your Claude Code usage history |
 | `/teleport` | Pull web session into terminal (alias: `/tp`) |
 | `/terminal-setup` | Configure terminal keybindings (Shift+Enter, etc.) |
 | `/theme` | Change color theme (light, dark, colorblind, ANSI) |
+| `/tui [renderer]` | Set the terminal UI renderer (e.g., `fullscreen`) and relaunch |
 | `/ultraplan <prompt>` | Draft plan in ultraplan session, review in browser |
+| `/ultrareview [PR#]` | Run a deep, multi-agent code review in a cloud sandbox |
 | `/upgrade` | Open upgrade page |
 | `/usage` | Show plan usage limits and rate limit status |
+| `/usage-credits` | Configure usage credits to keep working past limits (was `/extra-usage`) |
+| `/verify` | **Skill.** Verify a code change works by building, running, observing the app |
 | `/voice` | Toggle push-to-talk voice dictation |
 | `/web-setup` | Connect GitHub to Claude Code on the web |
 
 </details>
 
 <details>
-<summary>Skills / Slash Commands (167)</summary>
+<summary>Skills / Slash Commands (189)</summary>
 
 **superpowers**
 
 | Command | Description |
 |---------|-------------|
+| `/superpowers:using-superpowers` | Establishes how to find and use skills at conversation start |
 | `/superpowers:brainstorming` | Explore intent, requirements, and design before creative work |
 | `/superpowers:writing-plans` | Create multi-step implementation plans from specs |
 | `/superpowers:executing-plans` | Execute written plans with review checkpoints |
@@ -342,6 +365,14 @@ Commands built into the Claude Code CLI. Source: [commands reference](https://co
 | `/claude-mem:timeline-report` | Generate project development history/timeline reports |
 | `/claude-mem:version-bump` | Automated semantic versioning and release workflow for plugins |
 | `/claude-mem:knowledge-agent` | Build and query AI-powered knowledge bases from observations |
+| `/claude-mem:learn-codebase` | Prime a codebase by reading every source file in full |
+| `/claude-mem:how-it-works` | Explain how claude-mem captures observations and where data lives |
+| `/claude-mem:babysit` | Watch a PR/review cycle — keep checking comments, reviews, CI until merged |
+| `/claude-mem:pathfinder` | Map codebase into feature flowcharts and propose unified architecture |
+| `/claude-mem:oh-my-issues` | Cluster GitHub issue backlog by root cause into plan-master issues |
+| `/claude-mem:design-is` | Audit a design against Dieter Rams' ten "Good design is..." principles |
+| `/claude-mem:weekly-digests` | Generate serial week-by-week narrative digest of a project's timeline |
+| `/claude-mem:wowerpoint` | Turn one document into a kawaii NotebookLM slide-deck PDF |
 
 **commit-commands**
 
@@ -365,7 +396,7 @@ Commands built into the Claude Code CLI. Source: [commands reference](https://co
 | `/episodic-memory:search-conversations` | Search previous conversations semantically |
 | `/episodic-memory:remembering-conversations` | Recall past approaches and solutions |
 
-**taskmaster**
+**taskmaster** _(disabled)_
 
 | Command | Description |
 |---------|-------------|
@@ -436,6 +467,7 @@ Commands built into the Claude Code CLI. Source: [commands reference](https://co
 | skill-creator | `/skill-creator:skill-creator` | Create, modify, benchmark, and optimize skills |
 | claude-code-setup | `/claude-code-setup:claude-automation-recommender` | Analyze codebase & recommend Claude Code automations |
 | andrej-karpathy-skills | `/andrej-karpathy-skills:karpathy-guidelines` | Reduce LLM mistakes — surgical changes, surface assumptions, verifiable criteria |
+| remember | `/remember:remember` | Save session state for clean continuation next session |
 
 **ui-ux-pro-max** (additional skills)
 
@@ -493,52 +525,74 @@ Commands built into the Claude Code CLI. Source: [commands reference](https://co
 | `/codex:result` | Show stored final output for a finished Codex job |
 | `/codex:cancel` | Cancel an active background Codex job |
 
-**compound-engineering**
+**compound-engineering** _(disabled)_
 
 | Command | Description |
 |---------|-------------|
 | `/compound-engineering:ce-brainstorm` | Explore requirements and approaches through collaborative dialogue |
 | `/compound-engineering:ce-plan` | Create structured plans for multi-step tasks with interactive review |
-| `/compound-engineering:ce-work` | Execute work efficiently while maintaining quality |
+| `/compound-engineering:ce-work` | Execute work efficiently while finishing features |
+| `/compound-engineering:ce-work-beta` | `[BETA]` Execute work with external Codex delegation mode |
+| `/compound-engineering:ce-polish-beta` | `[BETA]` Start dev server, open feature in browser, iterate on improvements |
 | `/compound-engineering:ce-debug` | Systematic root-cause debugging for errors and test failures |
-| `/compound-engineering:ce-review` | Structured code review with tiered persona agents |
-| `/compound-engineering:ce-optimize` | Metric-driven iterative optimization loops (Karpathy autoresearch-inspired) |
-| `/compound-engineering:ce-compound` | Document a solved problem to compound team knowledge |
-| `/compound-engineering:ce-ideate` | Generate and evaluate grounded improvement ideas for a project |
-| `/compound-engineering:ce-sessions` | Search and query coding agent session history |
-| `/compound-engineering:ce-slack-research` | Search Slack for organizational context and decisions |
-| `/compound-engineering:ce-demo-reel` | Capture visual demo reels (GIF, screenshots) for PR descriptions |
-| `/compound-engineering:ce-pr-description` | Write or regenerate value-first PR descriptions |
-| `/compound-engineering:git-commit` | Create a git commit with clear, value-communicating message |
-| `/compound-engineering:git-commit-push-pr` | Commit, push, and open a PR with adaptive description |
-| `/compound-engineering:git-worktree` | Manage git worktrees for isolated parallel development |
-| `/compound-engineering:git-clean-gone-branches` | Clean up local branches whose remote tracking is gone |
-| `/compound-engineering:onboarding` | Generate ONBOARDING.md for new contributors |
-| `/compound-engineering:document-review` | Review requirements/plan docs using parallel persona agents |
-| `/compound-engineering:todo-resolve` | Batch-resolve approved todos after code review or triage |
-| `/compound-engineering:test-browser` | Run browser tests on pages affected by current PR/branch |
-| `/compound-engineering:proof` | Create, edit, comment on markdown docs via Proof's web API |
-| `/compound-engineering:claude-permissions-optimizer` | Optimize Claude Code permissions from session history |
-| `/compound-engineering:frontend-design` | Build web interfaces with genuine design quality |
-| `/compound-engineering:agent-native-architecture` | Build apps where agents are first-class citizens |
-| `/compound-engineering:gemini-imagegen` | Generate and edit images using Gemini API |
-| `/compound-engineering:andrew-kane-gem-writer` | Write Ruby gems following Andrew Kane's patterns |
-| `/compound-engineering:dhh-rails-style` | Write Ruby/Rails code in DHH's 37signals style |
-| `/compound-engineering:dspy-ruby` | Build type-safe LLM apps with DSPy.rb |
-| `/compound-engineering:every-style-editor` | Review/edit copy for Every's style guide compliance |
-| `/compound-engineering:lfg` | Full autonomous engineering workflow |
-| `/compound-engineering:ce-work-beta` | Execute work with experimental Codex delegation mode |
-| `/compound-engineering:ce-compound-refresh` | Refresh stale learnings and pattern docs against current codebase |
-| `/compound-engineering:changelog` | Create engaging changelogs for recent merges to main |
-| `/compound-engineering:resolve-pr-feedback` | Resolve PR review feedback by evaluating and fixing issues in parallel |
-| `/compound-engineering:agent-native-audit` | Run comprehensive agent-native architecture review with scored principles |
-| `/compound-engineering:todo-create` | Create durable work items in the file-based todo system |
-| `/compound-engineering:todo-triage` | Review pending todos for approval and prioritize findings |
-| `/compound-engineering:test-xcode` | Build and test iOS apps on simulator using XcodeBuildMCP |
-| `/compound-engineering:deploy-docs` | Validate and prepare documentation for GitHub Pages deployment |
+| `/compound-engineering:ce-code-review` | Tiered persona code review with confidence-gated findings |
+| `/compound-engineering:ce-simplify-code` | Simplify recently changed code while preserving behavior |
+| `/compound-engineering:ce-doc-review` | Review requirements/plan docs using parallel persona agents |
+| `/compound-engineering:ce-resolve-pr-feedback` | Resolve PR review feedback by evaluating validity and fixing in parallel |
+| `/compound-engineering:ce-optimize` | Metric-driven iterative optimization loops with parallel experiments |
+| `/compound-engineering:ce-compound` | Document a recently solved problem to compound team knowledge |
+| `/compound-engineering:ce-compound-refresh` | Refresh stale learning/pattern docs against the current codebase |
+| `/compound-engineering:ce-ideate` | Generate and critically evaluate grounded improvement ideas |
+| `/compound-engineering:ce-sessions` | Search/ask about Claude Code, Codex, Cursor session history |
+| `/compound-engineering:ce-slack-research` | Search Slack for organizational context, decisions, discussion arcs |
+| `/compound-engineering:ce-demo-reel` | Capture visual demo reels (GIF, terminal recording, screenshots) for PRs |
+| `/compound-engineering:ce-commit` | Create a git commit with a clear, value-communicating message |
+| `/compound-engineering:ce-commit-push-pr` | Commit, push, open a PR with adaptive, value-first description |
+| `/compound-engineering:ce-worktree` | Create an isolated git worktree for parallel feature work or PR review |
+| `/compound-engineering:ce-clean-gone-branches` | Clean up local branches whose remote tracking is gone |
+| `/compound-engineering:ce-release-notes` | Summarize recent compound-engineering plugin releases |
+| `/compound-engineering:ce-product-pulse` | Time-windowed pulse report — usage, quality, errors, signals worth investigating |
+| `/compound-engineering:ce-strategy` | Create/maintain STRATEGY.md — target problem, approach, users, metrics |
+| `/compound-engineering:ce-proof` | Human-in-the-loop review loops over markdown via Proof (proofeditor.ai) |
+| `/compound-engineering:ce-test-browser` | Run browser tests on pages affected by current PR/branch |
+| `/compound-engineering:ce-test-xcode` | Build/test iOS apps on simulator using XcodeBuildMCP |
+| `/compound-engineering:ce-frontend-design` | Build web interfaces with genuine design quality, not AI slop |
+| `/compound-engineering:ce-agent-native-architecture` | Build applications where agents are first-class citizens |
+| `/compound-engineering:ce-agent-native-audit` | Comprehensive agent-native architecture review with scored principles |
+| `/compound-engineering:ce-dhh-rails-style` | Write Ruby/Rails code in DHH's 37signals style |
+| `/compound-engineering:ce-gemini-imagegen` | Generate and edit images using Gemini API (Nano Banana Pro) |
+| `/compound-engineering:ce-riffrec-feedback-analysis` | Riffrec product-feedback workflow for `riffrec-*.zip` bundles |
 | `/compound-engineering:ce-setup` | Diagnose and configure compound-engineering environment |
 | `/compound-engineering:ce-update` | Check if plugin is up to date and fix stale cache |
-| `/compound-engineering:report-bug-ce` | Report a bug in the compound-engineering plugin |
+| `/compound-engineering:ce-report-bug` | Report a bug in the compound-engineering plugin |
+| `/compound-engineering:lfg` | Full autonomous engineering pipeline (plan → work → review → test → PR → CI) |
+
+**academic-research-skills**
+
+| Command | Description |
+|---------|-------------|
+| `/academic-research-skills:ars-full` | Full pipeline — research → write → review → revise → finalize |
+| `/academic-research-skills:ars-plan` | Socratic chapter-by-chapter planning |
+| `/academic-research-skills:ars-outline` | Detailed outline + evidence map |
+| `/academic-research-skills:ars-abstract` | Bilingual abstract + keywords |
+| `/academic-research-skills:ars-lit-review` | Annotated bibliography in paper format |
+| `/academic-research-skills:ars-revision` | Revised draft + R&R responses |
+| `/academic-research-skills:ars-revision-coach` | Revision roadmap + response letter skeleton |
+| `/academic-research-skills:ars-reviewer` | Simulated peer-review panel (EIC + 3 reviewers + Devil's Advocate) |
+| `/academic-research-skills:ars-citation-check` | Citation error report |
+| `/academic-research-skills:ars-format-convert` | Convert to LaTeX / DOCX / PDF / Markdown |
+| `/academic-research-skills:ars-disclosure` | Venue-specific AI-usage statement |
+| `/academic-research-skills:ars-mark-read` | Record human-read signal for citation keys |
+| `/academic-research-skills:ars-unmark-read` | Rescind a prior human-read mark |
+
+**academic-research-skills** (background skills, auto-activated)
+
+| Skill | Description |
+|-------|-------------|
+| `academic-pipeline` | Orchestrator for the full research → write → review → revise → finalize pipeline |
+| `academic-paper` | 12-agent academic paper writing pipeline (full/plan/outline/revision/abstract/lit-review modes) |
+| `academic-paper-reviewer` | Multi-perspective paper review with dynamic reviewer personas (EIC + 3 reviewers + Devil's Advocate) |
+| `deep-research` | Universal deep research agent team — 13-agent pipeline, 7 modes (full, brief, lit-review, fact-check, systematic review) |
 
 </details>
 
@@ -553,7 +607,7 @@ Plugins that provide tools via Model Context Protocol (used automatically, no sl
 | `context7` | Up-to-date library documentation and code examples |
 | `episodic-memory` | Semantic search across past Claude Code conversations |
 | `claude-mem` | Persistent cross-session memory with observation logging |
-| `task-master-ai` | Task orchestration & dependency management |
+| `chrome_devtools` | Drive Chrome — console, network, performance traces, screenshots |
 | `svelte` | Svelte documentation, examples, playground links, autofixer |
 | `shadcn` | shadcn/ui component registry search, examples, audit checklists |
 | `playwright` | Official Playwright browser automation & E2E testing |

@@ -15,7 +15,7 @@
   },
   "enabledPlugins": {
     "github@claude-plugins-official": true,
-    "commit-commands@claude-plugins-official": false,
+    "commit-commands@claude-plugins-official": true,
     "rust-analyzer-lsp@claude-plugins-official": true,
     "claude-mem@thedotmack": true,
     "claude-md-management@claude-plugins-official": true,
@@ -42,7 +42,8 @@
     "document-skills@anthropic-agent-skills": true,
     "codex@openai-codex": true,
     "compound-engineering@compound-engineering-plugin": false,
-    "academic-research-skills@academic-research-skills": true
+    "academic-research-skills@academic-research-skills": true,
+    "remember@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "ui-ux-pro-max-skill": {

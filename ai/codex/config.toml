@@ -1,0 +1,23 @@
+# Codex CLI config — tracked in dotfiles.
+# NOTE: per-project [projects.*] trust levels are intentionally NOT tracked.
+# They are machine-specific state that Codex regenerates per machine, and this
+# repo is public. `sync.sh --pull` strips them automatically. Do not re-add them.
+
+model = "gpt-5.6-sol"
+model_reasoning_effort = "high"
+personality = "pragmatic"
+
+[notice]
+hide_rate_limit_model_nudge = true
+
+[notice.model_migrations]
+"gpt-5.1-codex-max" = "gpt-5.2-codex"
+"gpt-5.3-codex" = "gpt-5.4"
+
+[tui]
+status_line = ["model-with-reasoning", "current-dir", "git-branch", "branch-changes", "run-state", "context-remaining", "five-hour-limit", "weekly-limit"]
+status_line_use_colors = true
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
+"gpt-5.6-sol" = 4

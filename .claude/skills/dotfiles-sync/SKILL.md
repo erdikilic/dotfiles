@@ -17,8 +17,9 @@ Run these in parallel:
 1. **Installed plugins**: Parse `~/.claude/plugins/installed_plugins.json` — extract all plugin keys (format: `name@marketplace`)
 2. **Installed MCPs**: Run `claude mcp list` — extract standalone MCP server names (ignore `plugin:*` and `claude.ai` entries)
 3. **Live settings**: Parse `~/.claude/settings.json` — extract `enabledPlugins` and `extraKnownMarketplaces`
-4. **Dotfiles tracked**: Read `claude-code/settings.json` — extract `enabledPlugins` and `extraKnownMarketplaces`
-5. **Dotfiles README**: Read `claude-code/README.md` — extract plugin table entries and MCP server table entries
+4. **Dotfiles tracked**: Read `ai/claude-code/settings.json` — extract `enabledPlugins` and `extraKnownMarketplaces`
+5. **Dotfiles README**: Read `ai/claude-code/README.md` — extract plugin table entries and MCP server table entries
+6. **Codex config**: Read `~/.codex/config.toml`, sanitize `[projects.*]`, compare against `ai/codex/config.toml` (`rules/default.rules` is intentionally untracked)
 
 ### Step 2: Diff and report
 
@@ -51,14 +52,16 @@ For each new plugin, determine:
 - **Source**: The marketplace repo URL (check `extraKnownMarketplaces` in live settings or the plugin cache directory)
 - **Description**: Brief one-line description (check the plugin's installed SKILL.md or package metadata)
 
+For Codex drift, prefer running `./sync.sh --pull` (fast path); this skill covers the richer README plugin-table upkeep.
+
 Then update these files:
 
-1. **`claude-code/settings.json`**:
+1. **`ai/claude-code/settings.json`**:
    - Add/remove entries in `enabledPlugins`
    - Add/remove entries in `extraKnownMarketplaces`
    - Match the structure of `~/.claude/settings.json`
 
-2. **`claude-code/README.md`**:
+2. **`ai/claude-code/README.md`**:
    - Update plugin count in title (`# Claude Code (N Plugins + M MCPs)`)
    - Add/remove rows in the appropriate category table
    - Add/remove marketplace lines in Quick Install section

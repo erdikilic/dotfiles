@@ -12,3 +12,6 @@ Thumbs.db
 # Superpowers
 .superpowers/
 docs/superpowers/
+
+# Claude Code local machine state (never commit)
+.claude/settings.local.json

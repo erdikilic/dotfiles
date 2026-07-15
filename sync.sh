@@ -62,12 +62,12 @@ check() {
 
     if command -v jq >/dev/null 2>&1 && [[ -f "$CLAUDE_LIVE" && -f "$CLAUDE_REPO" ]]; then
         local ol or
-        ol=$(comm -23 <(jq -r '.enabledPlugins|keys[]' "$CLAUDE_LIVE"|sort) \
-                      <(jq -r '.enabledPlugins|keys[]' "$CLAUDE_REPO"|sort) 2>/dev/null || true)
-        or=$(comm -13 <(jq -r '.enabledPlugins|keys[]' "$CLAUDE_LIVE"|sort) \
-                      <(jq -r '.enabledPlugins|keys[]' "$CLAUDE_REPO"|sort) 2>/dev/null || true)
-        [[ -n "$ol" ]] && { report '~' 'enabledPlugins' "only in LIVE: $(echo $ol|tr '\n' ' ')"; drift=1; }
-        [[ -n "$or" ]] && { report '~' 'enabledPlugins' "only in REPO: $(echo $or|tr '\n' ' ')"; drift=1; }
+        ol=$(comm -23 <(jq -r '.enabledPlugins|keys[]' "$CLAUDE_LIVE" 2>/dev/null|sort) \
+                      <(jq -r '.enabledPlugins|keys[]' "$CLAUDE_REPO" 2>/dev/null|sort) || true)
+        or=$(comm -13 <(jq -r '.enabledPlugins|keys[]' "$CLAUDE_LIVE" 2>/dev/null|sort) \
+                      <(jq -r '.enabledPlugins|keys[]' "$CLAUDE_REPO" 2>/dev/null|sort) || true)
+        [[ -n "$ol" ]] && { report '~' 'enabledPlugins' "only in LIVE: $(echo "$ol"|tr '\n' ' ')"; drift=1; }
+        [[ -n "$or" ]] && { report '~' 'enabledPlugins' "only in REPO: $(echo "$or"|tr '\n' ' ')"; drift=1; }
     elif ! command -v jq >/dev/null 2>&1; then
         report '--' 'enabledPlugins' '(jq not found; skipped)'
     fi

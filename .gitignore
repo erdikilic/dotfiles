@@ -4,6 +4,8 @@
 *token*
 *secret*
 *credential*
+auth.json
+.credentials.json
 
 # OS
 .DS_Store

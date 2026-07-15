@@ -181,7 +181,7 @@ Symlink: `ln -sf $(pwd)/conda/condarc ~/.condarc`
 
 ---
 
-## Claude Code (30 Plugins + 5 MCPs)
+## Claude Code (29 Plugins + 5 MCPs)
 
 See [ai/claude-code/README.md](ai/claude-code/README.md) for full details.
 
@@ -200,7 +200,6 @@ See [ai/claude-code/README.md](ai/claude-code/README.md) for full details.
 | `superpowers` | Core skills (debugging, TDD, planning, code review, parallel agents) |
 | `feature-dev` | Guided feature development with codebase analysis |
 | `code-simplifier` | Post-edit code cleanup & refactoring |
-| `taskmaster` | Task orchestration & dependency management _(disabled)_ |
 | `claude-code-setup` | Analyze codebases & recommend tailored hooks, skills, MCPs |
 | `double-shot-latte` | Auto-continue without "Would you like me to continue?" prompts _(disabled)_ |
 | `compound-engineering` | Dev workflow suite (brainstorm, plan, debug, review, PR descriptions) _(disabled)_ |

@@ -14,7 +14,9 @@
     "showSpeed": false,
     "showUsage": true,
     "showDuration": false,
-    "showSessionName": false
+    "showSessionName": false,
+    "showEffortLevel": true,
+    "sevenDayThreshold": 0
   },
   "gitStatus": {
     "enabled": true,

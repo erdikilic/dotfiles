@@ -5,25 +5,7 @@
     "BASH_MAX_TIMEOUT_MS": "1800000"
   },
   "permissions": {
-    "defaultMode": "auto",
-    "allow": [
-      "Bash(ls:*)",
-      "Bash(rg:*)",
-      "Bash(cat:*)",
-      "Bash(git status:*)",
-      "Bash(git diff:*)",
-      "Bash(git log:*)",
-      "Bash(git show:*)",
-      "Bash(git branch:*)",
-      "Bash(cargo check:*)",
-      "Bash(cargo test:*)",
-      "Bash(cargo clippy:*)",
-      "Bash(cargo fmt:*)",
-      "Bash(typst compile:*)",
-      "Bash(conda list:*)",
-      "Bash(uv pip list:*)",
-      "Bash(pixi list:*)"
-    ]
+    "defaultMode": "auto"
   },
   "model": "opus[1m]",
   "fallbackModel": ["opus", "sonnet"],

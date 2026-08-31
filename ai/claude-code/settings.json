@@ -1,6 +1,5 @@
 {
   "env": {
-    "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1",
     "BASH_DEFAULT_TIMEOUT_MS": "300000",
     "BASH_MAX_TIMEOUT_MS": "1800000"
   },
@@ -8,7 +7,7 @@
     "defaultMode": "auto"
   },
   "model": "opus[1m]",
-  "fallbackModel": ["opus", "sonnet"],
+  "fallbackModel": ["opus[1m]", "opus", "sonnet"],
   "statusLine": {
     "type": "command",
     "command": "bash -c 'plugin_dir=$(ls -d \"${CLAUDE_CONFIG_DIR:-$HOME/.claude}\"/plugins/cache/claude-hud/claude-hud/*/ 2>/dev/null | awk -F/ '\"'\"'{ print $(NF-1) \"\\t\" $0 }'\"'\"' | sort -t. -k1,1n -k2,2n -k3,3n -k4,4n | tail -1 | cut -f2-); exec \"/home/fox/.bun/bin/bun\" \"${plugin_dir}src/index.ts\"'"
@@ -102,6 +101,13 @@
   "cleanupPeriodDays": 90,
   "showTurnDuration": true,
   "showMessageTimestamps": true,
+  "disableRemoteControl": true,
+  "outputStyle": "Concise",
+  "tui": "fullscreen",
+  "terminalProgressBarEnabled": true,
+  "spellcheck": {
+    "enabled": true
+  },
   "attribution": {
     "commit": "",
     "pr": "",

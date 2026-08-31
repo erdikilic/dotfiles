@@ -1,6 +1,6 @@
 # Claude Code (29 Plugins + 5 MCPs)
 
-Claude Code v2.1.150 includes 89 built-in commands ([reference](https://code.claude.com/docs/en/commands)) plus the plugins and MCPs below.
+Claude Code v2.1.251 includes 89 built-in commands ([reference](https://code.claude.com/docs/en/commands)) plus the plugins and MCPs below.
 
 Plugins marked _(disabled)_ are installed but inactive — toggle via `/plugin`.
 

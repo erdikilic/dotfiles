@@ -1,4 +1,4 @@
-# Claude Code (29 Plugins + 5 MCPs)
+# Claude Code (28 Plugins + 6 MCPs)
 
 Claude Code v2.1.251 includes 89 built-in commands ([reference](https://code.claude.com/docs/en/commands)) plus the plugins and MCPs below.
 
@@ -48,6 +48,7 @@ Plugins marked _(disabled)_ are installed but inactive — toggle via `/plugin`.
 |--------|--------|-------------|
 | frontend-design | [official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/frontend-design) | Production-grade frontend components (React, Svelte, Vue) |
 | ui-ux-pro-max | [nextlevelbuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 50 styles, 21 palettes, 50 font pairings, multi-framework |
+| impeccable | [pbakaus](https://github.com/pbakaus/impeccable) | Design vocabulary + anti-pattern detection — `/impeccable audit\|critique\|polish` |
 
 ### Security & Quality
 
@@ -78,6 +79,7 @@ Configured via `claude mcp add --scope user`, not as plugins.
 | playwright | `npx @playwright/mcp@latest` | [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | Official Playwright browser automation & E2E testing |
 | svelte | `npx -y @sveltejs/mcp` | [sveltejs/mcp](https://github.com/sveltejs/mcp) | Official Svelte docs, examples, autofixer |
 | shadcn | `npx shadcn@latest mcp` | [shadcn-ui/ui](https://github.com/shadcn-ui/ui) | shadcn/ui component search, examples, audit |
+| seqera | `--transport http https://mcp.seqera.io/mcp` | [Seqera](https://docs.seqera.io/platform-cloud/seqera-mcp/overview) | nf-core module search, Wave container builds, pipeline launch. OAuth on first use |
 | context7 | `npx -y @upstash/context7-mcp --api-key KEY` | [upstash/context7](https://github.com/upstash/context7) | Standalone context7 with API key support |
 
 ### Quick Install
@@ -93,6 +95,7 @@ claude plugin marketplace add anthropics/skills
 claude plugin marketplace add openai/codex-plugin-cc
 claude plugin marketplace add EveryInc/compound-engineering-plugin
 claude plugin marketplace add Imbad0202/academic-research-skills
+claude plugin marketplace add pbakaus/impeccable
 
 # 2. Install plugins — official marketplace
 claude plugin install github@claude-plugins-official
@@ -126,11 +129,14 @@ claude plugin install codex@openai-codex
 claude plugin install compound-engineering@compound-engineering-plugin
 claude plugin install academic-research-skills@academic-research-skills
 
+claude plugin install impeccable@impeccable
+
 # 3. Add standalone MCP servers (user scope)
 claude mcp add --scope user chrome_devtools -- npx chrome-devtools-mcp@latest
 claude mcp add --scope user playwright -- npx @playwright/mcp@latest
 claude mcp add --scope user svelte -- npx -y @sveltejs/mcp
 claude mcp add --scope user shadcn -- npx shadcn@latest mcp
+claude mcp add --scope=user --transport=http seqera https://mcp.seqera.io/mcp
 claude mcp add --scope user context7 -- npx -y @upstash/context7-mcp --api-key YOUR_API_KEY
 ```
 

@@ -155,5 +155,6 @@
     }
   },
   "askUserQuestionTimeout": "never",
-  "switchModelsOnFlag": false
+  "switchModelsOnFlag": false,
+  "model": "opus"
 }

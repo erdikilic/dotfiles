@@ -14,12 +14,6 @@
       ""
     ]
   },
-  "model": "opus",
-  "fallbackModel": [
-    "opus[1m]",
-    "opus",
-    "sonnet"
-  ],
   "hooks": {
     "PreToolUse": [
       {
@@ -35,7 +29,6 @@
     ]
   },
   "disableRemoteControl": true,
-  "enableArtifact": false,
   "statusLine": {
     "type": "command",
     "command": "bash -c 'plugin_dir=$(ls -d \"${CLAUDE_CONFIG_DIR:-$HOME/.claude}\"/plugins/cache/claude-hud/claude-hud/*/ 2>/dev/null | awk -F/ '\"'\"'{ print $(NF-1) \"\\t\" $0 }'\"'\"' | sort -t. -k1,1n -k2,2n -k3,3n -k4,4n | tail -1 | cut -f2-); exec \"/home/fox/.bun/bin/bun\" \"${plugin_dir}src/index.ts\"'"
@@ -129,12 +122,27 @@
     }
   },
   "outputStyle": "Concise",
-  "feedbackDrafts": "quiet",
   "spinnerTipsEnabled": false,
+  "effortLevel": "xhigh",
+  "autoUpdatesChannel": "latest",
+  "tui": "fullscreen",
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "dark",
+  "showTurnDuration": true,
+  "showMessageTimestamps": true,
+  "terminalProgressBarEnabled": true,
+  "skipAutoPermissionPrompt": true,
+  "useAutoModeDuringPlan": true,
+  "fallbackModel": [
+    "opus[1m]",
+    "opus",
+    "sonnet"
+  ],
+  "enableArtifact": false,
+  "feedbackDrafts": "quiet",
   "spellcheck": {
     "enabled": true
   },
-  "effortLevel": "xhigh",
   "modelSettings": {
     "claude-fable-5-1": {
       "effortLevel": "high"
@@ -147,14 +155,5 @@
     }
   },
   "askUserQuestionTimeout": "never",
-  "autoUpdatesChannel": "latest",
-  "tui": "fullscreen",
-  "skipDangerousModePermissionPrompt": true,
-  "theme": "dark",
-  "switchModelsOnFlag": false,
-  "showTurnDuration": true,
-  "showMessageTimestamps": true,
-  "terminalProgressBarEnabled": true,
-  "skipAutoPermissionPrompt": true,
-  "useAutoModeDuringPlan": true
+  "switchModelsOnFlag": false
 }

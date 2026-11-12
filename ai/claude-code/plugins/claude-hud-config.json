@@ -17,7 +17,10 @@
     "showSessionName": false,
     "showEffortLevel": true,
     "sevenDayThreshold": 0,
-    "externalUsageWritePath": "/home/fox/.claude-work/usage-limits.json"
+    "externalUsageWritePath": "/home/fox/.claude-work/usage-limits.json",
+    "usagePace": true,
+    "showPromptCache": true,
+    "showResetLabel": false
   },
   "gitStatus": {
     "enabled": true,

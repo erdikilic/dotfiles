@@ -69,6 +69,21 @@ Plugins marked _(disabled)_ are installed but inactive — toggle via `/plugin`.
 | codex | [openai-codex](https://github.com/openai/codex-plugin-cc) | Delegate tasks & code review to OpenAI Codex from Claude Code |
 | academic-research-skills | [Imbad0202](https://github.com/Imbad0202/academic-research-skills) | Academic research & paper pipeline — deep research, writing, peer review, revision (`/ars-full`, `/ars-plan`) |
 
+### claude-hud Setup
+
+`plugins/claude-hud-config.json` → `~/.claude/plugins/claude-hud/config.json` (bars, usage pace ▲/▼,
+prompt-cache timer, no repeated "resets in").
+
+```bash
+cp ai/claude-code/plugins/claude-hud-config.json ~/.claude/plugins/claude-hud/config.json
+```
+
+> **Pending: Fable / per-model weekly bar.** claude-hud can draw per-model weekly windows
+> (`display.showModelScopedUsage`, on by default), but Claude Code's status line input only carries the
+> 5h / 7d totals ([anthropics/claude-code#104823](https://github.com/anthropics/claude-code/issues/104823)).
+> An external poller of the undocumented `/api/oauth/usage` endpoint was tried and dropped (aggressive 429s,
+> not live). When Claude Code ships per-model limits in the status line, enable it here.
+
 ### Standalone MCP Servers
 
 Configured via `claude mcp add --scope user`, not as plugins.
